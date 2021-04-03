@@ -10,7 +10,7 @@ resultDir = os.path.join(base_dir, r'allure_demo\report_demo\reports\result_dir'
 class BaseConfig:
     """通用配置变量"""
     # base_url
-    BASE_URL = "http://www.niuinfo.com"
+    BASE_URL = "http://127.0.0.1"
     # mobile、user_name
     MOBILE = 17802156775
     USER_NAME = "test"
@@ -18,8 +18,8 @@ class BaseConfig:
     PASSWORD = 123456
     # email（发件人邮箱以及授权码、发送邮件标题、发送邮件的html地址）
     USE_EMAIL = False
-    SENDER_EMAIL = "13764502352@163.com"
-    SENDER_PASSWORD = "SSMIVXVXDARXKHHF"
+    SENDER_EMAIL = "XXXXXX@163.com"
+    SENDER_PASSWORD = "SSMIVXVDWDWDWDAXXXXXDARXKHHF"
     SEND_SUB_TITLE = "本次接口自动化执行完成"
     SEND_EMAIL_HTML = r'{}\index.html'.format(resultDir)
     # mysql
@@ -44,7 +44,7 @@ class DevConfig(BaseConfig):
     # password
     PASSWORD = 123456
     # email（收件人邮箱）
-    RECEIVER_EMAIL = "1196010587@qq.com"
+    RECEIVER_EMAIL = "1196010XXXXXX@qq.com"
     # mysql
     USE_MYSQL = False
     # redis
