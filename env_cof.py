@@ -7,6 +7,7 @@ base_dir = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
 resultDir = os.path.join(base_dir, r'allure_demo\report_demo\reports\result_dir')
 
 
+# noinspection SpellCheckingInspection
 class BaseConfig:
     """通用配置变量"""
     # base_url
