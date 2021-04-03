@@ -1,0 +1,213 @@
+{
+  "uid" : "dd909132a06cb4d8",
+  "name" : "test_login_session",
+  "fullName" : "report_demo.cases.test_session.TestSession#test_login_session",
+  "historyId" : "78784c10af5b7ffd3559198d0961aaa8",
+  "time" : {
+    "start" : 1617446541505,
+    "stop" : 1617446541506,
+    "duration" : 1
+  },
+  "description" : "\n         获取测试用例执行结果: 调用001\n        ",
+  "descriptionHtml" : "<pre><code>     获取测试用例执行结果: 调用001\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "fix_module",
+    "time" : {
+      "start" : 1617446539980,
+      "stop" : 1617446540349,
+      "duration" : 369
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录",
+      "time" : {
+        "start" : 1617446539980,
+        "stop" : 1617446540345,
+        "duration" : 365
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "mobile",
+        "value" : "17802156123"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      }, {
+        "name" : "env_url",
+        "value" : "'http://www.niuinfo.com'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "something",
+    "time" : {
+      "start" : 1617446541505,
+      "stop" : 1617446541505,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "fix_login_session",
+    "time" : {
+      "start" : 1617446541505,
+      "stop" : 1617446541505,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n         获取测试用例执行结果: 调用001\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "get_login_session",
+      "time" : {
+        "start" : 1617446541505,
+        "stop" : 1617446541506,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "fix_login_session",
+        "value" : "'53c5db90-ea15-4c16-a82b-6cab52d1f73e'"
+      }, {
+        "name" : "something",
+        "value" : "None"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "fix_module::0",
+    "time" : {
+      "start" : 1617446541507,
+      "stop" : 1617446546647,
+      "duration" : 5140
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "something::0",
+    "time" : {
+      "start" : 1617446541506,
+      "stop" : 1617446541506,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "fix_login_session::0",
+    "time" : {
+      "start" : 1617446541507,
+      "stop" : 1617446541507,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "get_after_get_login_session"
+  }, {
+    "name" : "story",
+    "value" : "get_login_session"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "get_result"
+  }, {
+    "name" : "parentSuite",
+    "value" : "report_demo.cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_session"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSession"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-U6DG9EK"
+  }, {
+    "name" : "thread",
+    "value" : "2332-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "report_demo.cases.test_session"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "get_result" ]
+  },
+  "source" : "dd909132a06cb4d8.json",
+  "parameterValues" : [ ]
+}

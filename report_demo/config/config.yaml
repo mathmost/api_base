@@ -1,0 +1,22 @@
+# 添加其他配置信息
+# 已经在conftest.py添加了env_cof方法, 并有返回值(json格式)
+# 如果想使用这个文件作为参数文件的话，则只需要在用例的形参上添加env_cof即可
+
+# 例如:
+#@pytest.fixture(scope="session")
+#def env_conf(pytestconfig):
+#    """获取lb-env和globalConf环境配置文件"""
+#    env_conf = pytestconfig.getoption("--env")
+#    global_conf = pytestconfig.getini("globalConf")
+#    if env_conf:
+#        if global_conf:
+#            return {**get_yaml_data(file_absolute_path(env_conf)), **get_yaml_data(file_absolute_path(global_conf))}
+#
+#        return get_yaml_data(file_absolute_path(env_conf))
+#    else:
+#        raise RuntimeError("Configuration --env not found")
+
+
+# 测试用例模块的用例方法
+#def test_cof(env_conf):
+#  do something...

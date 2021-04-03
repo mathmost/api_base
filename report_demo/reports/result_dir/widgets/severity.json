@@ -1,0 +1,131 @@
+[ {
+  "uid" : "fad10fa94f7e0bdc",
+  "name" : "test_login[test_login_success]",
+  "time" : {
+    "start" : 1617447323814,
+    "stop" : 1617447323879,
+    "duration" : 65
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f12fb638cc21f235",
+  "name" : "test_login[test_login_password_error]",
+  "time" : {
+    "start" : 1617447323741,
+    "stop" : 1617447323806,
+    "duration" : 65
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "597eeb6f076cd842",
+  "name" : "test_need[2]",
+  "time" : {
+    "start" : 1617447324590,
+    "stop" : 1617447324591,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "84cb37d4163f2b3",
+  "name" : "test_need[1]",
+  "time" : {
+    "start" : 1617447324583,
+    "stop" : 1617447324586,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa0fa1d16502380d",
+  "name" : "test_login_session",
+  "time" : {
+    "start" : 1617447324614,
+    "stop" : 1617447324614,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c95a8eb85ee69ca",
+  "name" : "test_need[3]",
+  "time" : {
+    "start" : 1617447324594,
+    "stop" : 1617447324600,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "35eefab888ccc127",
+  "name" : "test_fix",
+  "time" : {
+    "start" : 1617447323885,
+    "stop" : 1617447323886,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2424c69bf4a8897a",
+  "name" : "test_mysql",
+  "time" : {
+    "start" : 1617447323890,
+    "stop" : 1617447324198,
+    "duration" : 308
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "40d558cb7c6aca25",
+  "name" : "test_login[test_login_password_empty]",
+  "time" : {
+    "start" : 1617447323602,
+    "stop" : 1617447323666,
+    "duration" : 64
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed98cc76f75790f",
+  "name" : "test_login[test_login_mobile_error]",
+  "time" : {
+    "start" : 1617447323670,
+    "stop" : 1617447323732,
+    "duration" : 62
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5fc2c98aefff866c",
+  "name" : "test_001",
+  "time" : {
+    "start" : 1617447324603,
+    "stop" : 1617447324604,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2287754f7d335c9a",
+  "name" : "test_002",
+  "time" : {
+    "start" : 1617447324611,
+    "stop" : 1617447324611,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1584e5f8a460a8d",
+  "name" : "test_login[test_login_mobile_empty]",
+  "time" : {
+    "start" : 1617447323529,
+    "stop" : 1617447323593,
+    "duration" : 64
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,195 @@
+{
+  "uid" : "c8a1d59201f17111",
+  "name" : "test_login[test_login_mobile_error]",
+  "fullName" : "report_demo.cases.test_login.TestLoginRunner#test_login",
+  "historyId" : "fe0f03e08a6096c717ca1e48aec0bcd6",
+  "time" : {
+    "start" : 1617446711921,
+    "stop" : 1617446711983,
+    "duration" : 62
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "fix_module",
+    "time" : {
+      "start" : 1617446711231,
+      "stop" : 1617446711766,
+      "duration" : 535
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录",
+      "time" : {
+        "start" : 1617446711231,
+        "stop" : 1617446711761,
+        "duration" : 530
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "mobile",
+        "value" : "17802156123"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      }, {
+        "name" : "env_url",
+        "value" : "'http://www.niuinfo.com'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "something",
+    "time" : {
+      "start" : 1617446711921,
+      "stop" : 1617446711921,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录",
+      "time" : {
+        "start" : 1617446711922,
+        "stop" : 1617446711983,
+        "duration" : 61
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "mobile",
+        "value" : "178021567751"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      }, {
+        "name" : "env_url",
+        "value" : "None"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "1f2a1486a6a6c865",
+      "name" : "log",
+      "source" : "1f2a1486a6a6c865.txt",
+      "type" : "text/plain",
+      "size" : 80
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "fix_module::0",
+    "time" : {
+      "start" : 1617446712924,
+      "stop" : 1617446718068,
+      "duration" : 5144
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "something::0",
+    "time" : {
+      "start" : 1617446711984,
+      "stop" : 1617446711984,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "login"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "login_module"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "report_demo.cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLoginRunner"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-U6DG9EK"
+  }, {
+    "name" : "thread",
+    "value" : "9456-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "report_demo.cases.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "'test_login_mobile_error'"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "run(order=1)", "login" ]
+  },
+  "source" : "c8a1d59201f17111.json",
+  "parameterValues" : [ "'test_login_mobile_error'" ]
+}

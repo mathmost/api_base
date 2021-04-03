@@ -1,0 +1,20 @@
+"Status","Name","Duration in ms","Description"
+"passed","report_demo.cases.test_result.TestResult#test_002","0","
+         获取测试用例执行结果: 调用002
+        "
+"broken","report_demo.cases.test_mysql.TestSqlRunner#test_mysql","308",""
+"passed","report_demo.cases.test_need.TestNeed#test_need","6",""
+"passed","report_demo.cases.test_session.TestSession#test_login_session","0","
+         获取测试用例执行结果: 调用001
+        "
+"failed","report_demo.cases.test_result.TestResult#test_001","1","
+         获取测试用例执行结果: 调用001
+        "
+"passed","report_demo.cases.test_login.TestLoginRunner#test_fix","1",""
+"passed","report_demo.cases.test_need.TestNeed#test_need","3",""
+"passed","report_demo.cases.test_need.TestNeed#test_need","1",""
+"passed","report_demo.cases.test_login.TestLoginRunner#test_login","65",""
+"passed","report_demo.cases.test_login.TestLoginRunner#test_login","65",""
+"passed","report_demo.cases.test_login.TestLoginRunner#test_login","64",""
+"passed","report_demo.cases.test_login.TestLoginRunner#test_login","64",""
+"passed","report_demo.cases.test_login.TestLoginRunner#test_login","62",""
