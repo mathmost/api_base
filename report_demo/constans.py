@@ -1,11 +1,7 @@
 # coding: utf-8
-from env_cof import config_map
+from env_cof import app_cof
 import redis
 import os
-
-# 执行环境的配置信息 dev, pre, master
-op_environment = "dev"
-app_cof = config_map.get(op_environment)
 
 
 # 地址路径
@@ -23,6 +19,9 @@ class FileDir:
     # 日志文件
     proFile = os.path.join(base_dir, r'report_demo')
     # allure文件
+    reportDir = os.path.join(base_dir, r'report_demo\reports')
+    if not os.path.exists(reportDir):
+        os.mkdir(reportDir)
     results = os.path.join(base_dir, r'report_demo\reports\results')
     # allure报告
     resultDir = os.path.join(base_dir, r'report_demo\reports\result_dir')

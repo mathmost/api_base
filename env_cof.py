@@ -11,7 +11,7 @@ resultDir = os.path.join(base_dir, r'allure_demo\report_demo\reports\result_dir'
 class BaseConfig:
     """通用配置变量"""
     # base_url
-    BASE_URL = "http://127.0.0.1"
+    BASE_URL = "http://www.niuinfo.com"
     # mobile、user_name
     MOBILE = 17802156775
     USER_NAME = "test"
@@ -84,3 +84,7 @@ config_map = {
     "pre": PreConfig,
     "master": MasterConfig
 }
+
+# 执行环境的配置信息 dev, pre, master
+op_environment = "dev"
+app_cof = config_map.get(op_environment)
