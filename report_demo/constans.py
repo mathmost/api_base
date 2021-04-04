@@ -36,6 +36,7 @@ class FileDir:
 f = FileDir()
 
 # 生成app_cof实例对象后导入才生效且不可删除ReadHandle包的导入
+from report_demo.pages import RequestParam
 from report_demo.utils.send_email import EmailSend
 from report_demo.utils.db_service import DBService
 # noinspection PyUnresolvedReferences
@@ -80,6 +81,9 @@ class CaseData:
 
     # request请求对象
     request_handle = RequestHandle()
+
+    # request请求数据对象
+    request_param = RequestParam()
 
     # email对象
     email = EmailSend()
