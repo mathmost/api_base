@@ -18,6 +18,8 @@
   
 6. 以上都准备完成后, report_demo下运行主入口: run.py<br/>
   ps: 修改env_cof.py下的域名则需要在pages下修改登录接口以及可能调用了登录接口的文件<br/>
+  
+7. jenkis + allure以及项目部署自行解决
 
 ps<br/>
   1. 建议在utils下封装的脚本除必须条件都使用单例，在constans.py的case_data类中添加该对象, 调用封装脚本，只需要在用例中导入case_data实例<br/>
