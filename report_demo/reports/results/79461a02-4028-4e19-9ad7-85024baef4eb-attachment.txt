@@ -1,1 +1,0 @@
-INFO     log:test_login.py:23 login_mobile: 178021567751, login_password: 123456
