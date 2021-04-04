@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="配置文件修改">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/config/token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/config/token.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/constans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/logs/20210404.log" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/logs/20210404.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/base_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/base_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/db_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/db_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/file_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/file_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/log_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/log_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/request_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/request_handle.py" afterDir="false" />
-    </list>
+    <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="配置文件修改" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/env_cof.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="375">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -425,7 +414,7 @@
       <workItem from="1617365810177" duration="1337000" />
       <workItem from="1617369475180" duration="5948000" />
       <workItem from="1617423464225" duration="7912000" />
-      <workItem from="1617493360114" duration="6490000" />
+      <workItem from="1617493360114" duration="6581000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -438,7 +427,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72247000" />
+    <option name="totallyTimeSpent" value="72338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -860,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/env_cof.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="375">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
