@@ -51,3 +51,15 @@ class SqlData:
         module_sql_data = ReadHandle(abs_sql_path).yaml_files_read()
 
         return module_sql_data
+
+
+class SqlResult:
+    """对sql查询的结果进行判断, 可以指定index获取返回结果"""
+
+    @staticmethod
+    def get_res(sql_query_res, index=None):
+        if len(sql_query_res) != 0:
+            return sql_query_res[0] if index in (0, None) or type(index) != int else sql_query_res[index]
+        else:
+            raise Exception("res is empty")
+

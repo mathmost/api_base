@@ -44,7 +44,7 @@ from report_demo.utils.yaml_handle import ReadHandle
 from report_demo.utils.file_handle import GetFilePath
 from report_demo.utils.request_handle import RequestHandle
 from report_demo.utils.assert_handle import Assertion
-from report_demo.utils.base_utils import (singleton, SqlData)
+from report_demo.utils.base_utils import (singleton, SqlData, SqlResult)
 
 
 # noinspection PyMethodMayBeStatic
@@ -102,6 +102,9 @@ class CaseData:
     # 考虑当前用例的模块并不会有很多，所以将sql语句写在一个文件内，如果有需要可以根据模块分开
     sql_obj = SqlData()
     sql_data = sql_obj.get_sql_sentence(r"\sql_sentence.yaml")
+
+    # 获取sql处理结果
+    sql_res = SqlResult()
 
     # 获取登录模块的用例数据
     path = f.yamlFile + r"\login.yaml"

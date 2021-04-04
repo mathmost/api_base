@@ -24,12 +24,14 @@ class BaseConfig:
     SEND_SUB_TITLE = "本次接口自动化执行完成"
     SEND_EMAIL_HTML = r'{}\index.html'.format(resultDir)
     # mysql
+    USE_MYSQL = False
     MYSQL_USERNAME = "root"
     MYSQL_PASSWORD = "123456"
     MYSQL_HOST = "127.0.0.1"
     MYSQL_PORT = 3306
     MYSQL_LIBRARY = "dn"
     # redis
+    USE_REDIS = False
     REDIS_HOST = "127.0.0.1"
     REDIS_PORT = 6379
     REDIS_NODE = 0
@@ -79,12 +81,82 @@ class MasterConfig(BaseConfig):
     ...
 
 
+class AddCustomer:
+    """自定义客户类，继承BaseConfig"""
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = object.__new__(cls)
+
+        return cls._instance
+
+    def __init__(self, customer_config, inheritance_config):
+        """
+        :param customer_config: 客户类名
+        :param inheritance_config: 继承的类名
+        """
+        self.customer_config = customer_config
+        self.inheritance_config = inheritance_config
+
+    def add_customer(self):
+        """返回客户类的元类实例"""
+        customer = type('{}'.format(self.customer_config), (self.inheritance_config,), {})
+
+        return customer()
+
+
+class Cus:
+    """设置客户类的属性"""
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = object.__new__(cls)
+
+        return cls._instance
+
+    # noinspection PyPep8Naming
+    @staticmethod
+    def set_customer(customer_config, **kwargs):
+        """customer_config: 客户类"""
+        CusConfig = AddCustomer(customer_config, BaseConfig).add_customer()
+        # 获取客户的类名的属性列表
+        attributes = dir(CusConfig)
+        # 设置客户类的属性值
+        for attribute in attributes:
+            if kwargs.get(attribute):
+                setattr(CusConfig, attribute, kwargs.get(attribute))
+
+        return CusConfig
+
+
+# 如果需要重写BaseConfig的数据则需要重新设置customer类的属性值
+cus = Cus()
+CustomerA_Config = cus.set_customer('CustomerAConfig',
+                                    BASE_URL="http://www.basea.com",
+                                    MOBILE=13764502512,
+                                    PASSWORD=123456)
+CustomerB_Config = cus.set_customer('CustomerBConfig',
+                                    BASE_URL="http://www.baseb.com",
+                                    MOBILE=18012345678,
+                                    PASSWORD=123456)
+CustomerC_Config = cus.set_customer('CustomerCConfig',
+                                    BASE_URL="http://www.basec.com",
+                                    MOBILE=18012378945,
+                                    PASSWORD=123456)
+
+# config类指向
 config_map = {
     "dev": DevConfig,
     "pre": PreConfig,
-    "master": MasterConfig
+    "master": MasterConfig,
+    "customerA": CustomerA_Config,
+    "customerB": CustomerB_Config,
+    "customerC": CustomerC_Config
 }
 
 # 执行环境的配置信息 dev, pre, master
-op_environment = "dev"
+# 如果需要添加客户信息，则继续添加类继承BaseConfig以及在config_map中添加指向即可
+op_environment = "customerB"
 app_cof = config_map.get(op_environment)

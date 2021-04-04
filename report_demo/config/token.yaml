@@ -1,3 +1,9 @@
+customer:
+  customer_token: 25b03117-835e-4c4e-8105-1b7f9edbcd1f
+customerA:
+  customerA_token: 3c288e09-91b4-44bc-a2f9-59cd0feaa184
+customerB:
+  customerB_token: ad005b58-8f4b-42f3-abe2-78311132adf1
 dev:
   dev_token: c51d8698-d0c4-4e3e-b917-d2034d54c530
 master:
