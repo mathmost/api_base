@@ -43,7 +43,7 @@ class GetKeys:
 
 
 class SqlData:
-    """获取sql语句"""
+    """获取yaml文件下的sql语句、用例数据等"""
 
     @staticmethod
     def get_sql_sentence(filename):
