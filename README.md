@@ -13,7 +13,7 @@
 4. 本地安装mysql以及redis<br/>
 
 5. 启动celery异步任务<br/>
-  celery -A report.demo.tasks worker --concurrency=1000 -P eventlet<br/>
+  celery -A report_demo.tasks worker --concurrency=1000 -P eventlet<br/>
   ps: report.demo.tasks为当前任务脚本所在的目录
   
 6. 以上都准备完成后, report_demo下运行主入口: run.py<br/>
