@@ -1,14 +1,16 @@
 # coding: utf-8
 import allure
 from report_demo.constans import *
+from ..pages import request_param
 
 
 @allure.step("登录")
 def login(mobile, password, env_url=None):
+    login_param = request_param.login_map
     if env_url:
-        url = env_url + '/test/user/login?'
+        url = env_url + login_param.get('login')
     else:
-        url = app_cof.BASE_URL + '/test/user/login?'
+        url = app_cof.BASE_URL + login_param.get('login')
     data = {
         "mobile": mobile,
         "password": password

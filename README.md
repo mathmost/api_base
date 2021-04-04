@@ -17,7 +17,7 @@
   ps: report_demo.tasks为当前任务脚本所在的目录
   
 6. 以上都准备完成后, report_demo下运行主入口: run.py<br/>
-  ps: 修改env_cof.py下的域名则需要在pages下修改登录接口以及可能调用了登录接口的文件<br/>
+  ps: 修改env_cof.py下的域名则需要在pages.__init以及接口模块下修改接口URL参数以及可能调用了接口的文件, 甚至可以将请求参数封装在pages.init文件<br/>
   
 7. jenkins + allure以及项目部署自行解决
 
