@@ -112,18 +112,5 @@ case_data = CaseData()
 # 生成allure报告
 allure_command = "allure generate {} -o {} --clean".format(f.results, f.resultDir)
 
-print("case_data: ", id(case_data))
-print("case_data: ", id(case_data))
-print("case_data: ", id(case_data))
-print("assert_handle: ", id(case_data.assert_handle))
-print("assert_handle: ", id(case_data.assert_handle))
-print("assert_handle: ", id(case_data.assert_handle))
-print("file_handle: ", id(case_data.file_handle))
-print("file_handle: ", id(case_data.file_handle))
-print("file_handle: ", id(case_data.file_handle))
-print("request_handle: ", id(case_data.request_handle))
-print("request_handle: ", id(case_data.request_handle))
-print("request_handle: ", id(case_data.request_handle))
-
 
 

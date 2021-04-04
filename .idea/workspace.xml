@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="配置文件修改" />
+    <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="配置文件修改">
+      <change beforePath="$PROJECT_DIR$/report_demo/constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/constans.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="647">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
               <folding>
                 <element signature="e#49#76#0" expanded="true" />
               </folding>
@@ -69,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env_cof.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="-825">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -190,9 +192,9 @@
         <option value="$PROJECT_DIR$/report_demo/utils/file_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/log_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/request_handle.py" />
-        <option value="$PROJECT_DIR$/report_demo/constans.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210404.log" />
         <option value="$PROJECT_DIR$/env_cof.py" />
+        <option value="$PROJECT_DIR$/report_demo/constans.py" />
       </list>
     </option>
   </component>
@@ -226,13 +228,7 @@
               <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
               <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -414,7 +410,7 @@
       <workItem from="1617365810177" duration="1337000" />
       <workItem from="1617369475180" duration="5948000" />
       <workItem from="1617423464225" duration="7912000" />
-      <workItem from="1617493360114" duration="6581000" />
+      <workItem from="1617493360114" duration="6683000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -427,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72338000" />
+    <option name="totallyTimeSpent" value="72440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,7 +443,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -837,20 +833,20 @@
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210404.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
+    <entry file="file://$PROJECT_DIR$/env_cof.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="e#49#76#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-825">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env_cof.py">
+    <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="647">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="e#49#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
