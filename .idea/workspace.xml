@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="650">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -194,39 +194,6 @@
               <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
               <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-              <item name="py_html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-              <item name="result_dir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,7 +379,7 @@
       <workItem from="1617423464225" duration="7912000" />
       <workItem from="1617493360114" duration="9115000" />
       <workItem from="1617506591578" duration="17000" />
-      <workItem from="1617507085002" duration="1284000" />
+      <workItem from="1617507085002" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -425,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76173000" />
+    <option name="totallyTimeSpent" value="76320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="650">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
