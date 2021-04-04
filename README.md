@@ -30,4 +30,5 @@ ps<br/>
     d. 测试数据以yaml形式封装在cases_data目录下, 需根据业务自行添加模块数据<br/>
   5. 已经在cases用例目录提供了最基本的login session result 变量池等demo的使用<br/>
   6. 如何安装mysql redis以及邮件通知的设置请自行百度
+  7. 如果需要测试登录模块, 尽可能避免env_cof.py文件的登录信息与登录模块的用例数据冲突，避免业务上导致session或者toke过期
 
