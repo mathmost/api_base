@@ -28,5 +28,6 @@ ps<br/>
     b. 接口放在pages目录下, 需要根据接口文档及业务自行添加接口<br/>
     c. 用例放在cases目录下，遵循pytest.ini自定义或者默认的文件、方法等命名规则<br/>
     d. 测试数据以yaml形式封装在cases_data目录下, 需根据业务自行添加模块数据<br/>
-  5. 已经在cases用例目录提供了最基本的login session result 变量池等demo的使用
+  5. 已经在cases用例目录提供了最基本的login session result 变量池等demo的使用<br/>
+  6. 如何安装mysql redis以及邮件通知的设置请自行百度
 
