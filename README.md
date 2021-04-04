@@ -12,7 +12,7 @@
 
 4. 本地安装mysql以及redis
 
-5. 启动celery异步任务
+5. 启动celery异步任务<br/>
   celery -A report.demo.tasks worker --concurrency=1000 -P eventlet
   ps: report.demo.tasks为当前任务脚本所在的目录
   
