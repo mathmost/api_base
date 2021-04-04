@@ -1,17 +1,11 @@
 # coding: utf-8
 import os
-from pathlib2 import Path
+from .base_utils import singleton
 
 
+@singleton
 class GetFilePath:
     """文件操作类"""
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-
-        return cls._instance
 
     def __init__(self):
         self.file_paths = []

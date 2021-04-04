@@ -3,6 +3,7 @@ from ..constans import f
 import logging
 import time
 import os
+from .base_utils import singleton
 
 # 定义日志文件路径
 LOG_PATH = os.path.join(f.proFile, "logs")
@@ -10,16 +11,10 @@ if not os.path.exists(LOG_PATH):
     os.mkdir(LOG_PATH)
 
 
+@singleton
 class Logger:
     """日志"""
     logger = None
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-
-        return cls._instance
 
     @classmethod
     def get_logger(cls):

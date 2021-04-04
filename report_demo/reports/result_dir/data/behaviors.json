@@ -1,0 +1,205 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "login_module",
+    "children" : [ {
+      "name" : "login",
+      "children" : [ {
+        "name" : "test_login[test_login_mobile_empty]",
+        "uid" : "f1494dbe19087547",
+        "parentUid" : "560ebfa7a5f11817065a412df1f65471",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501461430,
+          "stop" : 1617501461492,
+          "duration" : 62
+        },
+        "flaky" : true,
+        "parameters" : [ "'test_login_mobile_empty'" ]
+      }, {
+        "name" : "test_login[test_login_password_empty]",
+        "uid" : "b6d4f8718545e7a0",
+        "parentUid" : "560ebfa7a5f11817065a412df1f65471",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501461498,
+          "stop" : 1617501461555,
+          "duration" : 57
+        },
+        "flaky" : true,
+        "parameters" : [ "'test_login_password_empty'" ]
+      }, {
+        "name" : "test_login[test_login_mobile_error]",
+        "uid" : "75103ecbf64f8468",
+        "parentUid" : "560ebfa7a5f11817065a412df1f65471",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501461561,
+          "stop" : 1617501461622,
+          "duration" : 61
+        },
+        "flaky" : true,
+        "parameters" : [ "'test_login_mobile_error'" ]
+      }, {
+        "name" : "test_login[test_login_password_error]",
+        "uid" : "4c22fd97732362a1",
+        "parentUid" : "560ebfa7a5f11817065a412df1f65471",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501461633,
+          "stop" : 1617501461697,
+          "duration" : 64
+        },
+        "flaky" : true,
+        "parameters" : [ "'test_login_password_error'" ]
+      }, {
+        "name" : "test_login[test_login_success]",
+        "uid" : "e2a10e4587f61c0c",
+        "parentUid" : "560ebfa7a5f11817065a412df1f65471",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501461702,
+          "stop" : 1617501461765,
+          "duration" : 63
+        },
+        "flaky" : true,
+        "parameters" : [ "'test_login_success'" ]
+      } ],
+      "uid" : "560ebfa7a5f11817065a412df1f65471"
+    }, {
+      "name" : "test_fix",
+      "uid" : "863e3422fb06cee4",
+      "parentUid" : "9e6d1b390ab6fd6a7915ffcca910c8d1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617501461770,
+        "stop" : 1617501461770,
+        "duration" : 0
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9e6d1b390ab6fd6a7915ffcca910c8d1"
+  }, {
+    "name" : "test_sql_module",
+    "children" : [ {
+      "name" : "sql_module",
+      "children" : [ {
+        "name" : "test_mysql",
+        "uid" : "178c6280d0cc3779",
+        "parentUid" : "7f5ce8cf1b5f64d06c1b423ef911da80",
+        "status" : "broken",
+        "time" : {
+          "start" : 1617501461774,
+          "stop" : 1617501462116,
+          "duration" : 342
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7f5ce8cf1b5f64d06c1b423ef911da80"
+    } ],
+    "uid" : "8ea814b4c328402d56644a74089a1653"
+  }, {
+    "name" : "needs_module",
+    "children" : [ {
+      "name" : "needs",
+      "children" : [ {
+        "name" : "test_need[1]",
+        "uid" : "ed3218a96db824cb",
+        "parentUid" : "6af4d1c5edfc8398be9d97a478ec1d4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501462530,
+          "stop" : 1617501462534,
+          "duration" : 4
+        },
+        "flaky" : true,
+        "parameters" : [ "1" ]
+      }, {
+        "name" : "test_need[2]",
+        "uid" : "4b11f1dd7c29bfd0",
+        "parentUid" : "6af4d1c5edfc8398be9d97a478ec1d4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501462550,
+          "stop" : 1617501462552,
+          "duration" : 2
+        },
+        "flaky" : true,
+        "parameters" : [ "2" ]
+      }, {
+        "name" : "test_need[3]",
+        "uid" : "8a4d32506fb86599",
+        "parentUid" : "6af4d1c5edfc8398be9d97a478ec1d4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501462567,
+          "stop" : 1617501462569,
+          "duration" : 2
+        },
+        "flaky" : true,
+        "parameters" : [ "3" ]
+      } ],
+      "uid" : "6af4d1c5edfc8398be9d97a478ec1d4a"
+    } ],
+    "uid" : "84ad220be02006b1f465632557dda65c"
+  }, {
+    "name" : "get_result_module",
+    "children" : [ {
+      "name" : "get_result_001",
+      "children" : [ {
+        "name" : "test_001",
+        "uid" : "f34c95ca497cb18e",
+        "parentUid" : "f7a13d3434ee7ce65ecc46a603540d6c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617501462577,
+          "stop" : 1617501462578,
+          "duration" : 1
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f7a13d3434ee7ce65ecc46a603540d6c"
+    }, {
+      "name" : "get_result_002",
+      "children" : [ {
+        "name" : "test_002",
+        "uid" : "56680acb2a48b007",
+        "parentUid" : "d7d14a668c43081f1f822e2df07d31c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501462591,
+          "stop" : 1617501462592,
+          "duration" : 1
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d7d14a668c43081f1f822e2df07d31c4"
+    } ],
+    "uid" : "16d02b811add245d00393910f1f508bf"
+  }, {
+    "name" : "get_after_get_login_session",
+    "children" : [ {
+      "name" : "get_login_session",
+      "children" : [ {
+        "name" : "test_login_session",
+        "uid" : "7edfc0d971255f80",
+        "parentUid" : "15d848ea3b4d7176b5d59332a711c0b7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617501462595,
+          "stop" : 1617501462595,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "15d848ea3b4d7176b5d59332a711c0b7"
+    } ],
+    "uid" : "ca5fbc541b753b8910c258c11b8a6506"
+  } ]
+}

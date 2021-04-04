@@ -3,6 +3,18 @@ from report_demo.constans import f
 from report_demo.utils.yaml_handle import ReadHandle
 
 
+# noinspection PyUnusedLocal
+def singleton(cls, *args, **kwargs):
+    """单例"""
+    instance = {}
+
+    def _instance():
+        if cls not in instance:
+            instance[cls] = cls(*args, *kwargs)
+        return instance[cls]
+    return _instance
+
+
 class GetKeys:
     """获取全部字典的key，包含列表中包含的字典"""
 

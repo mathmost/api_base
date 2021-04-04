@@ -1,18 +1,12 @@
 # coding: utf-8
 from .db_service import DBService
-from .base_utils import GetKeys
+from .base_utils import (singleton, GetKeys)
 from collections import Counter
 
 
+@singleton
 class Assertion:
     """公共断言方法"""
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-
-        return cls._instance
 
     @classmethod
     def assert_equal_value(cls, reality_value, expected_value):
@@ -110,3 +104,5 @@ class Assertion:
         db = DBService()
         print("db and expected_value: ", db, expected_value)
         ...
+
+

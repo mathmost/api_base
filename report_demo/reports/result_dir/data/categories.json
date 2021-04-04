@@ -1,0 +1,45 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'CaseData' object has no attribute 'db'",
+      "children" : [ {
+        "name" : "test_mysql",
+        "uid" : "178c6280d0cc3779",
+        "parentUid" : "eb0cf7df26076ce31a483dfa5b97d3d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1617501461774,
+          "stop" : 1617501462116,
+          "duration" : 342
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "eb0cf7df26076ce31a483dfa5b97d3d8"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: 实际值: 1 != 预期值: 0",
+      "children" : [ {
+        "name" : "test_001",
+        "uid" : "f34c95ca497cb18e",
+        "parentUid" : "08d2c040ca6747674a967d902cdfe951",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617501462577,
+          "stop" : 1617501462578,
+          "duration" : 1
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "08d2c040ca6747674a967d902cdfe951"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

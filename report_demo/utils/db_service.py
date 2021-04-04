@@ -2,6 +2,7 @@
 import mysql.connector
 from ..constans import app_cof
 from .log_handle import logger
+from .base_utils import singleton
 
 
 # mysql connect
@@ -19,16 +20,9 @@ def connect():
     return conn
 
 
+@singleton
 class DBService:
     """数据库执行"""
-
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-
-        return cls._instance
 
     def __init__(self):
         self.conn = connect()

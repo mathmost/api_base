@@ -1,14 +1,11 @@
 # coding: utf-8
 import requests
+from .base_utils import singleton
 
 
+@singleton
 class RequestHandle:
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-        return cls._instance
+    """接口请求封装"""
 
     @staticmethod
     def required(method, url, data=None, headers=None):

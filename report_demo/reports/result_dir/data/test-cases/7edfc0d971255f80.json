@@ -1,0 +1,275 @@
+{
+  "uid" : "7edfc0d971255f80",
+  "name" : "test_login_session",
+  "fullName" : "report_demo.cases.test_session.TestSession#test_login_session",
+  "historyId" : "78784c10af5b7ffd3559198d0961aaa8",
+  "time" : {
+    "start" : 1617501462595,
+    "stop" : 1617501462595,
+    "duration" : 0
+  },
+  "description" : "\n         获取测试用例执行结果: 调用001\n        ",
+  "descriptionHtml" : "<pre><code>     获取测试用例执行结果: 调用001\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "fix_module",
+    "time" : {
+      "start" : 1617501461074,
+      "stop" : 1617501461427,
+      "duration" : 353
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录",
+      "time" : {
+        "start" : 1617501461074,
+        "stop" : 1617501461419,
+        "duration" : 345
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "mobile",
+        "value" : "17802156123"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      }, {
+        "name" : "env_url",
+        "value" : "'http://www.niuinfo.com'"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 1
+  }, {
+    "name" : "fix_login_session",
+    "time" : {
+      "start" : 1617501462595,
+      "stop" : 1617501462595,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "something",
+    "time" : {
+      "start" : 1617501462595,
+      "stop" : 1617501462595,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n         获取测试用例执行结果: 调用001\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "get_login_session",
+      "time" : {
+        "start" : 1617501462595,
+        "stop" : 1617501462595,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "fix_login_session",
+        "value" : "'12308bfa-4181-47d4-9445-8b5d73649da4'"
+      }, {
+        "name" : "something",
+        "value" : "None"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "fix_module::0",
+    "time" : {
+      "start" : 1617501462597,
+      "stop" : 1617501462733,
+      "duration" : 136
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "fix_login_session::0",
+    "time" : {
+      "start" : 1617501462596,
+      "stop" : 1617501462596,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "something::0",
+    "time" : {
+      "start" : 1617501462596,
+      "stop" : 1617501462596,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "get_after_get_login_session"
+  }, {
+    "name" : "story",
+    "value" : "get_login_session"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "get_result"
+  }, {
+    "name" : "parentSuite",
+    "value" : "report_demo.cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_session"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSession"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-U6DG9EK"
+  }, {
+    "name" : "thread",
+    "value" : "10804-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "report_demo.cases.test_session"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a63aaf54916bdda2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617501320322,
+        "stop" : 1617501320322,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "e74ab9f8d0c00f4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617501266754,
+        "stop" : 1617501266754,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "28e0ee673eb405dc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617501209528,
+        "stop" : 1617501209528,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "83cf995c2ff94665",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'SingleInstance' object has no attribute 'assert_equal_value'",
+      "time" : {
+        "start" : 1617500675114,
+        "stop" : 1617500675114,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "76806ecee7a82f70",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'SingleInstance' object has no attribute 'assert_equal_value'",
+      "time" : {
+        "start" : 1617500579146,
+        "stop" : 1617500579146,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "9fab7f55e896d2e8",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'SingleInstance' object has no attribute 'assert_equal_value'",
+      "time" : {
+        "start" : 1617500524902,
+        "stop" : 1617500524902,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "dbcb41dad27ceee0",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='www.base.com', port=80): Max retries exceeded with url: /test/user/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002497D32A630>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1617500465613,
+        "stop" : 1617500465613,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "get_result" ]
+  },
+  "source" : "7edfc0d971255f80.json",
+  "parameterValues" : [ ]
+}

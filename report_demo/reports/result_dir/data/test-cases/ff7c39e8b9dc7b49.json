@@ -1,0 +1,186 @@
+{
+  "uid" : "ff7c39e8b9dc7b49",
+  "name" : "test_need[2]",
+  "fullName" : "report_demo.cases.test_need.TestNeed#test_need",
+  "historyId" : "17f118741dc1aaf86271ccf030a6c940",
+  "time" : {
+    "start" : 1617500675087,
+    "stop" : 1617500675087,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'SingleInstance' object has no attribute 'file_absolute_path'",
+  "statusTrace" : "pytestconfig = <_pytest.config.Config object at 0x00000204D048F6A0>\n\n    @pytest.fixture(scope=\"session\")\n    def env_conf(pytestconfig):\n        \"\"\"获取lb-env和globalConf环境配置文件\"\"\"\n        env_conf = pytestconfig.getoption(\"--env\")\n        global_conf = pytestconfig.getini(\"globalConf\")\n        if env_conf:\n>           env_conf_stream = ReadHandle(case_data.file_handle.file_absolute_path(env_conf))\nE           AttributeError: 'SingleInstance' object has no attribute 'file_absolute_path'\n\n..\\conftest.py:37: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1617500675078,
+      "stop" : 1617500675078,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "env_conf",
+    "time" : {
+      "start" : 1617500675078,
+      "stop" : 1617500675078,
+      "duration" : 0
+    },
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'SingleInstance' object has no attribute 'file_absolute_path'\n",
+    "statusTrace" : "  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\pluggy\\callers.py\", line 187, in _multicall\n    res = hook_impl.function(*args)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\_pytest\\fixtures.py\", line 964, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python37\\lib\\site-packages\\_pytest\\fixtures.py\", line 792, in call_fixture_func\n    res = fixturefunc(**kwargs)\n  File \"D:\\allure_demo\\conftest.py\", line 37, in env_conf\n    env_conf_stream = ReadHandle(case_data.file_handle.file_absolute_path(env_conf))\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 0
+  }, {
+    "name" : "fix_module",
+    "time" : {
+      "start" : 1617500673912,
+      "stop" : 1617500674298,
+      "duration" : 386
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录",
+      "time" : {
+        "start" : 1617500673912,
+        "stop" : 1617500674289,
+        "duration" : 377
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "mobile",
+        "value" : "17802156123"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      }, {
+        "name" : "env_url",
+        "value" : "'http://www.niuinfo.com'"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 1
+  }, {
+    "name" : "something",
+    "time" : {
+      "start" : 1617500675103,
+      "stop" : 1617500675103,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "fix_module::0",
+    "time" : {
+      "start" : 1617500675118,
+      "stop" : 1617500675251,
+      "duration" : 133
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "something::0",
+    "time" : {
+      "start" : 1617500675106,
+      "stop" : 1617500675106,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "needs"
+  }, {
+    "name" : "feature",
+    "value" : "needs_module"
+  }, {
+    "name" : "tag",
+    "value" : "supply"
+  }, {
+    "name" : "parentSuite",
+    "value" : "report_demo.cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_need"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNeed"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-U6DG9EK"
+  }, {
+    "name" : "thread",
+    "value" : "6652-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "report_demo.cases.test_need"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "need",
+    "value" : "2"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "supply" ]
+  },
+  "source" : "ff7c39e8b9dc7b49.json",
+  "parameterValues" : [ "2" ]
+}

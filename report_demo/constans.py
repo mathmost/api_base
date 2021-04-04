@@ -43,10 +43,11 @@ from report_demo.utils.yaml_handle import ReadHandle
 from report_demo.utils.file_handle import GetFilePath
 from report_demo.utils.request_handle import RequestHandle
 from report_demo.utils.assert_handle import Assertion
-from report_demo.utils.base_utils import SqlData
+from report_demo.utils.base_utils import (singleton, SqlData)
 
 
 # noinspection PyMethodMayBeStatic
+@singleton
 class CaseData:
     """
     一、使用单例将当前类中的变量以及对象加载到内存中保存为唯一的内存ID
@@ -58,14 +59,6 @@ class CaseData:
 
     三、可以通过globals_set以及local_set在所有的用例中设置和获取全局/局部变量
     """
-    _instance = None
-
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = object.__new__(cls)
-
-        return cls._instance
-
     def __init__(self):
         # 全局变量、局部变量
         self.globals_variable = {}
@@ -94,7 +87,7 @@ class CaseData:
     # db: 根据环境允许链接数据库则创建db对象
     print("是否要使用数据库: ", app_cof.USE_MYSQL)
     if app_cof.USE_MYSQL:
-        db = DBService()
+        db = DBService
 
     # redis: 根据环境允许链接数据库则创建redis_store对象
     print("是否使用redis: ", app_cof.USE_REDIS)
@@ -118,3 +111,19 @@ case_data = CaseData()
 
 # 生成allure报告
 allure_command = "allure generate {} -o {} --clean".format(f.results, f.resultDir)
+
+print("case_data: ", id(case_data))
+print("case_data: ", id(case_data))
+print("case_data: ", id(case_data))
+print("assert_handle: ", id(case_data.assert_handle))
+print("assert_handle: ", id(case_data.assert_handle))
+print("assert_handle: ", id(case_data.assert_handle))
+print("file_handle: ", id(case_data.file_handle))
+print("file_handle: ", id(case_data.file_handle))
+print("file_handle: ", id(case_data.file_handle))
+print("request_handle: ", id(case_data.request_handle))
+print("request_handle: ", id(case_data.request_handle))
+print("request_handle: ", id(case_data.request_handle))
+
+
+
