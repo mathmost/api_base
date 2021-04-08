@@ -1,4 +1,4 @@
-# api_autotest_base
+# api_base
 基于pytest allure yaml实现接口自动化的base业务，可根据环境设置不同的参数，比如邮件通知、数据库以及redis的使用等
 
 1. 根据不同环境自行修改env_cof.py文件的配置信息<br/>
