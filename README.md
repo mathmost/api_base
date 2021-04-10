@@ -5,7 +5,7 @@
 
 2. 根据env_cof.py文件的app对象设置的环境加载配置信息结合pytest收集并执行用例<br/>
 
-3. task文件下存在生成报告及邮件发送，安装步骤如下（个人操作）<br/>
+3. 后置通知采用celery异步任务，任务脚本存放于task.py，安装步骤如下（个人操作）<br/>
   pip install celery-with-redis<br/>
   pip uninstall celery && pip uninstall redis<br/>
   pip install celery && pip install redis<br/>
