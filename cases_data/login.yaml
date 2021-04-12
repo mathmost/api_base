@@ -1,0 +1,16 @@
+# 登陆用例数据
+test_login_mobile_empty:
+  mobile:
+  password: 123456
+test_login_password_empty:
+  mobile: 17802156775
+  password:
+test_login_mobile_error:
+  mobile: 178021567751
+  password: 123456
+test_login_password_error:
+  mobile: 17802156775
+  password: 123456789
+test_login_success:
+  mobile: 17802156775
+  password: 123456
