@@ -4,7 +4,7 @@ import os
 base_dir = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
 # allure报告
 # 本地项目可以写死，如果有部署则填写ip地址即可
-resultDir = os.path.join(base_dir, r'allure_demo\report_demo\reports\result_dir')
+resultDir = os.path.join(base_dir, r'api_base\report_demo\reports\result_dir')
 
 
 # noinspection SpellCheckingInspection
