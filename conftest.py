@@ -85,6 +85,11 @@ def fix_module():
                          ['html'],
                          [[app_cof.SEND_EMAIL_HTML]],
                          [['report.html']])
+    # 全局以及环境变量写入文件
+    if app_cof.USE_WRITE_VARIABLE:
+        var_handle = RwYaml(f.variableFile)
+        var_handle.write_yaml_with_dict(None, case_data.globals_variable)
+        var_handle.write_yaml_with_dict(app_cof.BASE_URL, case_data.local_variable)
     print("====== end ======")
 
 
