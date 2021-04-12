@@ -54,11 +54,26 @@ class RwYaml(object):
             old_data[nb][key] = value
             with open(self.file, 'w', encoding='utf-8') as f:
                 self.y.dump(old_data, f)
-                print('写入成功：%s' % old_data)
         else:
             with open(self.file, 'a', encoding='utf-8') as f:
                 self.y.dump(data, f)
-                print('写入成功：%s' % data)
+
+    # 字典写入
+    def write_yaml_with_dict(self, nb, __dict: dict):
+        if not isinstance(__dict, dict):
+            raise Exception("Data format must be dict")
+
+        data = {nb: __dict} if nb is not None else __dict
+        old_data = self.read_yaml_all()
+        for data_key, data_value in __dict.items():
+            if old_data and data_key in old_data:
+                old_data[data_key] = data_value
+                with open(self.file, 'w', encoding='utf-8') as f:
+                    self.y.dump(data, f, allow_unicode=True)
+            else:
+                with open(self.file, 'a', encoding='utf-8') as f:
+                    self.y.dump(data, f, allow_unicode=True)
+            break
 
     # 读取节点下面key的值
     def read_yaml_value(self, nb, key):

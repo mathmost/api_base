@@ -29,6 +29,8 @@ class FileDir:
     yamlFile = os.path.join(base_dir, r'report_demo\cases_data')
     # 登陆后写入和获取的token.yaml文件
     tokenFile = os.path.join(base_dir, r'report_demo\config\token.yaml')
+    # 全局变量以及局部变量文件
+    variableFile = os.path.join(base_dir, r'report_demo\config\variable.yaml')
     # pytest.ini文件路径
     iniDir = os.path.join(base_dir, r'pytest.ini')
 
@@ -36,6 +38,7 @@ class FileDir:
 f = FileDir()
 
 # 生成app_cof实例对象后导入才生效且不可删除ReadHandle包的导入
+from faker import Faker
 from report_demo.pages import RequestParam
 from report_demo.utils.send_email import EmailSend
 from report_demo.utils.db_service import DBService
@@ -58,20 +61,38 @@ class CaseData:
         2. 数据获取错误时（例如mysql连接失败），每有一个用例则加载一次mysql连接
         3. 在cases.__init__文件时重复增加、修改数据会导致目录混乱，不便于数据管理
 
-    三、可以通过globals_set以及local_set在所有的用例中设置和获取全局/局部变量
+    三、可以通过globals_set以及locals_set在所有的用例中设置和获取全局/环境变量
     """
+
     def __init__(self):
-        # 全局变量、局部变量
+        # 全局变量、环境变量
         self.globals_variable = {}
-        self.local_variable = {}
+        self.local_variable = {
+            app_cof.BASE_URL: {}
+        }
 
     def globals_set(self, key, value):
-        """设置全局变量值"""
+        """设置全局变量"""
         self.globals_variable[key] = value
 
-    def local_set(self, key, value):
-        """设置局部变量值"""
-        self.local_variable[key] = value
+    def globals_get(self, key):
+        """获取全局变量的值"""
+        return self.globals_variable[key]
+
+    def locals_set(self, key, value):
+        """设置环境变量"""
+        self.local_variable[app_cof.BASE_URL][key] = value
+
+    def locals_get(self, key):
+        """获取环境变量，如果环境变量不存在则从全局变量获取"""
+        local_res = self.local_variable[app_cof.BASE_URL].get(key, None)
+        if not local_res:
+            local_res = self.globals_get(key)
+
+        return local_res
+
+    # faker随机数据对象
+    fak = Faker('zh_CN')
 
     # 公共断言类对象
     assert_handle = Assertion()
@@ -118,6 +139,3 @@ case_data = CaseData()
 
 # 生成allure报告
 allure_command = "allure generate {} -o {} --clean".format(f.results, f.resultDir)
-
-
-

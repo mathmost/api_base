@@ -1,6 +1,0 @@
-# SQL语句
-
-# 登陆
-user_name: "select * from xn_m_user where mobile = '{}';"
-
-# ...

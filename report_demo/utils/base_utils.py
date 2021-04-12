@@ -1,4 +1,7 @@
 # coding: utf-8
+import base64
+import hashlib
+import subprocess
 from report_demo.constans import f
 from report_demo.utils.yaml_handle import ReadHandle
 
@@ -12,6 +15,7 @@ def singleton(cls, *args, **kwargs):
         if cls not in instance:
             instance[cls] = cls(*args, *kwargs)
         return instance[cls]
+
     return _instance
 
 
@@ -63,3 +67,48 @@ class SqlResult:
         else:
             raise Exception("res is empty")
 
+
+def get_str_md5(string):
+    """传入一个字符串，返回字符串md5值"""
+    if not isinstance(string, str):
+        raise TypeError("只支持字符串类型")
+    m = hashlib.md5()
+    m.update(string.encode('utf-8'))
+    return m.hexdigest()
+
+
+# noinspection PyIncorrectDocstring
+def get_str_sha1(string):
+    """sha1 算法加密"""
+    if not isinstance(string, str):
+        raise TypeError("只支持字符串类型")
+    sh = hashlib.sha1()
+    sh.update(string.encode('utf-8'))
+    return sh.hexdigest()
+
+
+# noinspection PyIncorrectDocstring
+def to_base64(string):
+    """传入一个字符串，返回字符串的Base64"""
+    if not isinstance(string, str):
+        raise TypeError("只支持字符串类型")
+    base64_str = base64.b64encode(string.encode("utf-8"))
+    return str(base64_str, 'utf-8')
+
+
+# noinspection PyIncorrectDocstring
+def from_base64(string):
+    """传入一个Base64，返回字符串"""
+    if not isinstance(string, str):
+        raise TypeError("只支持字符串类型")
+    missing_padding = 4 - len(string) % 4
+    if missing_padding:
+        string += '=' * missing_padding
+    return str(base64.b64decode(string), 'utf-8')
+
+
+def shell(cmd):
+    """cmd命令执行函数"""
+    output, errors = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
+    o = output.decode("utf-8")
+    return o
