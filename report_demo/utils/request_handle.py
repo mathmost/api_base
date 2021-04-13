@@ -9,22 +9,34 @@ class RequestHandle:
 
     @staticmethod
     def required(method, url, data=None, headers=None):
-        """表单格式"""
+        """application为表单格式"""
         res = ""
         if method == "get":
             res = requests.get(url=url, params=data, headers=headers)
         if method == "post":
             res = requests.post(url=url, data=data, headers=headers)
+        if method == "put":
+            res = requests.put(url=url, data=data, headers=headers)
+        if method == "delete":
+            res = requests.put(url=url, params=data, headers=headers)
+        if method == "patch":
+            res = requests.put(url=url, data=data, headers=headers)
         return res
 
     @staticmethod
     def required_json(method, url, data=None, headers=None):
-        """json格式"""
+        """application为json格式"""
         res = ""
         if method == "get":
-            res = requests.get(url=url)
+            res = requests.get(url=url, params=data)
         if method == "post":
             res = requests.post(url=url, json=data, headers=headers)
+        if method == "put":
+            res = requests.put(url=url, json=data, headers=headers)
+        if method == "delete":
+            res = requests.put(url=url, params=data, headers=headers)
+        if method == "patch":
+            res = requests.put(url=url, json=data, headers=headers)
         return res
 
 
