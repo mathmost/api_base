@@ -2,257 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/py_html/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/004bf826-708e-409f-9be4-88400c56040c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/01f81e41-70d7-4d4f-99a0-af322f48d8ef-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0258505d-3d40-453c-8e3d-07f0f1a0f1b1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/06c2dd82-c88b-44de-a154-84e24ca63f1d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/07465035-9b3c-4eff-8331-0e2e6888f648-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/07817e97-4b81-416e-9aaf-cffa94d1a500-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0808dcf9-df82-4ab1-8b06-8fc0cb9ce902-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/081efe21-c4bf-480e-ad87-e2fbfbdbb229-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0bdac602-644c-474f-b5c6-498afefa45bc-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0da9cb79-7c0f-4455-ac1e-63642d71b06d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0ddb3069-6189-413c-bbe5-9faaf61cf181-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0ee1bb33-8a87-474c-abc8-45bc92b7912c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0ee1dc55-9677-4220-99dd-d1f0dbb10741-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0fbb1469-98fb-4a00-b087-5d066f25e03a-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/0fe64abf-a604-45bb-825c-c53cef6c1857-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/10749f61-f402-4fe8-aa00-554dd827bec7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/12028430-6265-41c9-a487-a40ad6372c4d-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1253fbda-be57-4be4-8cee-03fb32c4be69-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/14276f48-3741-4861-af36-1335f7522f43-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/14fc0b1e-2de6-43ee-9a12-e3b5c77f8c3d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/161e5725-c699-4822-8bf0-b62eb71d5795-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/176243f4-68d4-43d5-a8c3-8e803cadf6a2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/18c5af1d-eaa9-42ab-a00f-b2f7187f49a1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/190d7433-96d0-4649-b960-9f114e1a2140-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1979c7eb-d36a-4252-bfc7-e16d8fe61cd9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/198e28bc-59db-4b34-8d95-24fac55dad36-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/19d69b0c-4666-4421-837b-0f7905f09a62-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/19d7d8d0-155d-49c0-96d9-741c65513855-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1ab616ab-a134-4fcb-8c9e-c3be816703c3-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1c954700-d258-43bd-b329-8355255c10a3-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1dca5cab-5411-4d9f-b7c1-8a898bd931db-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1f7ac1a2-5d15-4c0a-aeca-ec33af182865-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/1ffa2d7c-fad7-4c09-a313-f170f93c25f5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/20f99e62-7f4d-4e81-a88c-c2b23a0ff519-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/21853d9d-83be-4bed-bff4-313c47908345-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/219f8a25-29c0-4d09-8a4c-5fdfe3da4705-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/23073a0f-4b6f-4e5d-a391-e460d52b5933-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/23f48cd5-4424-42d8-a29a-7865d728c63f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/24063d4f-388f-488d-be2b-ea7e54a419aa-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/244ca4f9-bd8e-4397-b910-556a4f114457-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/25b03162-a9f6-4cb7-a264-0099c8aa480f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/271f7fbd-1dc4-4990-9251-cd32d101cb20-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/27930acf-5551-494e-9c31-8040522d4eb8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2880026e-70e5-45cc-a903-0f628deff042-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/28f44a3f-8a2e-4563-bfdf-656a158f15d7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2970ed08-f3fc-4403-ba1e-bd6b2db23a97-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2a845013-b478-499c-a826-d7e9dcb0bc90-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2c881657-849c-4f1d-9aca-84b2f44b5db1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2c89c3c9-7180-4580-bc0a-ca72050582bd-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2c8bd410-f45e-425c-9c71-d742904c2b59-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2cf11430-2117-4116-87e2-58682c2a31ff-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2d67d8e2-fea8-41a5-a4d8-9d3daaec6c93-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2e3d531f-ccf5-461d-9ae9-08549c019ebb-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/2e83bd68-62e4-4f99-b263-9641bb589be8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/307e6201-07e4-4743-a5d3-ae69b9d4f88f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/30f2a632-657d-46ef-91e2-d861dfee5150-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/31b61be0-7b1f-4937-89a5-79924436544e-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3223feeb-404c-4698-965b-2acca0d7e7a7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/330a7ec3-2bd4-446f-b650-05f55b034c9e-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/34fff8e8-afc6-49a2-8f50-dd9c3e3ac57f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/35c653ac-ba43-43d9-93cc-185e7f284512-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/379d2e5c-985b-4b02-88f7-eafd9e0b15bd-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3aae3a78-c0f4-4278-818c-d7644c7a21d0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3c75feda-8e33-4379-9d49-44ac640dc45b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3cf4ef96-a0ec-4924-b20d-d5e4ae65e2c1-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3d847d1b-726d-471a-b07d-67846c37ba7b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/3ebc7ceb-4a0c-4a55-8cc4-be8b82172388-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4025bdbf-07d4-46ea-823f-d37bf4c0dee3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/413096ce-a95b-43aa-904b-2fa4ea89e345-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/415009ea-51d8-4888-a3e6-3958d94abd69-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4163120a-898f-4e4b-a9d3-139506ee09d6-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/41668920-dd9d-4996-9d25-592783b9c35a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4191b9bf-ce06-48e3-8e07-bb08f41097ae-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/41c480ed-dd12-428d-8ecf-96e349e16600-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/42c8c803-e4a5-4043-a39b-696470e52fde-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/461a291d-197e-491d-9f6b-822b57155e41-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/46319fb7-3efe-42bb-a973-407992a52b25-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/46e4482d-4805-4125-93f5-148f2769925f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/49549bf5-7cb8-4437-85cc-338b5f74b914-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/49668694-4eb8-473d-8988-d96b70ad3e8c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/49d7bed2-cf77-4afd-b7f1-128fcef572a8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4bd34908-4cfa-4e0e-9d65-6637e97f6293-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4c99a390-b448-4ba2-8fee-431ba848c54e-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4d23d8dc-1ad8-4112-8550-b20630b61935-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/4d2eea5e-d400-4158-a039-11f1b833b318-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/51e41d2c-8659-4c01-a013-61f53c492987-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/52a6265f-5257-49f3-9121-65cfb339b20b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/52e5932b-05b5-4713-b721-f8cfb99700aa-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/53eaf37a-d0e5-4d40-b569-99c291916232-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/53f03d36-7e30-4bd1-aed4-dd0aa90d2a65-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/54baddc9-ced9-44e8-922b-57470917a52a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/55166c38-9e2b-478c-b08a-468e721f5ced-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/55584955-ddaa-45bf-9136-c0959fa3864f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/587064e2-b22b-4a16-b923-242b12dd2fb2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/589d9968-d2d3-4f21-8280-6cfa7dae58d6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/597ffefb-a42f-4c82-b1a6-498e8f764781-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/599b960c-a8dc-47cb-a018-66a41a41755b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/59ac57b9-d877-4fbc-8c9f-483304bac01e-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/5ac48d37-4417-444b-bf3d-fcf7da2d1a49-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/5cce7cb2-04f8-4421-a69f-e1f71ad79380-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/5d65bacf-37cd-423b-a541-39ee9382d1bc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/60d9cd42-3c5b-478e-b317-c736ec076a74-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/617db886-c8e7-4430-b7a3-f20f267bb0e1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/622dd408-080b-4a4d-91a7-83a70c8c7a5c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/626b713a-296f-4a3c-8315-8dcac55143f8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/635305bb-71f1-4ae3-9ab6-9fd07c89b76f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/65998586-a2b2-4f25-aef6-f1db81e07eab-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/663fe12c-cc62-45a3-9126-dc51158ab433-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/6644ac6e-026e-4c3d-9c27-d3f5ee155126-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/670556b8-ba1a-4e60-bb48-3aa2359ae508-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/681da29b-fbb1-41b3-b323-4a24b2da6dac-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/683fdb5d-7481-46ca-9912-ee4f9716d496-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/69c34c14-4b53-4f82-8ebf-97e2e28c9bd0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/6b7ec9d3-72c4-4362-9653-4253cc950ed9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/6bfa3923-56ad-417f-9fe5-93eb40028853-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/6e203c0f-3935-4b7c-97f7-1a5c2bbdf585-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/6f7d13c4-744c-4da7-a647-b1741a998a32-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/71f972f6-03bc-4b0f-bde1-d00fd8e0ad45-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/72494194-704c-471f-981a-400c64eb1abe-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7276706c-74ea-404a-8df6-72180539015a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/72b9e3a6-f2b4-4c4e-8bee-990ee5c1b5df-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/73515f3d-5dd6-4bb0-a537-7fb204913a87-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/751f6749-7679-4379-9a5f-22d76f362d1b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/754ea07b-0fcc-459e-822b-df57438f6c94-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/75aee270-0179-4453-b106-82446d6d2fa4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/75c63dd7-ed72-4893-a6bb-01a5ff3a4217-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/76373ee0-4043-43cb-911d-be27d5d2b0ae-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/76fa1633-6d20-411e-9f54-a17bd743cbca-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7714b2ff-8f1f-42a6-8cea-6b60d191f5c4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/77e55297-bbc8-41cc-b68a-016b01709629-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/77e7a85a-5f17-4ea6-97e6-99d320ea8a05-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/780fe0c2-2afc-42cf-b824-a1c505eda567-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7819e162-d2e2-4b13-a339-1ea4a52f2dfd-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7940e471-726a-42d1-a2cb-48fbf5d11613-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/794b3050-b951-429c-84da-eea4cad384e5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7b41d04c-9fc1-4103-b6fe-b7ca0470ba4d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7d1090b3-63c8-4d61-8a7c-fb4342ec1abc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7e30b589-a2a4-4714-9a92-fe60fc0bd173-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/7e6f9f06-7ae5-4b47-bb46-9dd1b8255831-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/852acf03-a0c9-4532-b340-af78cafe4ef9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/85627a30-b978-4875-89ee-6d994ee88365-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/88ca0b47-7e49-468b-aeed-c8ebb85a43fa-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/8904d0a7-a5ea-4c5a-96f6-cdf5e5f63221-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/8a1a5eb0-284a-4858-a177-7771fc910a8f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/8db42217-37dd-4c82-a59d-8c661530b396-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/8ebb7e50-8bf6-42e3-bb11-e5592a1e70e2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/90655663-1af5-41c6-9938-3ddc505d6746-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/91d56a04-0a27-4ef3-ab81-89db96ae3cfc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/925c7908-a9e9-4bfa-8f33-6c525cbbc41d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/92a981c1-5423-416d-a786-4155bb0c47e2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/93d5095c-d224-45f2-b672-79fe774d076b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9402d843-bf0f-45d0-8e04-47a45dd9d16c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/956e036f-0190-42dc-88c1-c3fc68058dd9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/97bd4094-d042-436e-9ac4-8fd181b80c9d-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/97f11c6a-4135-4cff-8935-4fae166c436b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9a680bbe-183d-455c-a4b5-ef1818ca7e77-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9b36e0ca-d443-4521-bb40-f4703ea4d104-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9ba19986-a963-43af-b080-3379afded055-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9c2c7e26-b7df-4a13-8be3-f967f29e113f-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9c439511-b3b4-428d-82a0-bd5c119df310-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9e1ebb1f-afb2-4bda-b44b-f799e54c0b1e-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9ee7fcba-068e-48aa-9bbf-4f7bb9ce5ba0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/9f737b31-9847-41e6-a7f7-01bc3674d343-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a09b9f17-9979-49f6-946f-701290a2ae90-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a0f82e6a-ee7c-4a50-8e14-76ce00a5a268-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a2b5fe62-4238-4665-8df4-86a26c7f5ee6-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a3a5180c-a762-43c2-aa17-185340df91a8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a50ea12d-618b-4984-9bce-aba84fafc866-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a53c5cfc-4cd6-4745-9a69-bf4ada4f93c2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a5c01a52-9f11-4d14-bcb6-3262f5ff2e4a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/a6ee0fce-746f-49b6-a374-e4090b952a47-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ab909e5d-9c5e-4aba-a620-7f680e19a0d2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ae13ec19-88f2-47a0-a288-6e918323a16f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ae40ba0c-2cff-4598-9fc8-60563de0ea9a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ae7080e7-bab7-4d93-a679-ed9f5fc8d354-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/af9f62bb-6393-41fd-b11d-ee296b1e5501-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b07411e5-c106-48d1-9e93-f771d0b9a726-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b095032e-e1f9-4dc5-aa8b-79f1d4fcfca8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b10c6fb3-4b07-4fd6-a27c-eb14b8bee8d5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b16e1ea7-6dc7-4f52-8c1a-3bfa8f8acc57-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b1f184b6-3898-44f0-84b5-bc7b03766cb5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b2ee66d3-680a-4c5d-9af3-38fe43f1b9f2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b30d95b9-9227-4693-92a5-eac272922494-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b4e1bf6f-e5b4-45ca-ad75-73177ffb0a0c-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/b5e4edd6-6d76-48fe-822b-633aab4e8845-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/bc47ca46-4e9c-46f1-9eef-edb7b6c70aae-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/bd06b6d2-d5b2-4e23-a60f-caae1bf5c820-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/bd52b484-11f5-40dd-a539-088e4447ba0d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/be05940c-8e28-4bc9-804b-f75049151bd7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/be714c4b-7b44-4687-98dd-9c2d9c3b5776-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/bee5d8a3-ed6c-4fe7-9376-b60b740a28ad-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c10a8d16-2297-4b11-b7d7-854ec265212f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c3d4f34b-9d77-4f57-bf18-56483308ef4e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c4653d25-7438-4207-a119-62e8ae04a9b8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c46a07df-5983-4ec2-a25d-263fd1060eb9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c482cbcd-feb6-4206-ace3-d40644dbd74b-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c60b868e-f38e-43a6-bbc0-acba851a1bf9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c6580651-cb48-484c-add2-cc5eb9265de1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c67699eb-9c9b-46c0-9522-7ca762cb3158-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c864bd7c-ce1a-4f3f-a53c-14837825b996-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c8a62210-8c43-4d93-aca8-ec7305868820-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/c99e3ec7-cb88-4798-9ea6-554d6a05469e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cc254a7a-d6fa-4d51-82c5-2b60fbf1f504-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cd1e6f0a-74ae-4f56-b17d-00d978bff085-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cf1922f1-3878-4088-b809-df36478df3c7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cf3141d8-ca5c-4a13-ba67-b6d3facee18e-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cfb720b4-880a-4717-bc7d-910695a91ab1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/cfd9a58b-73cf-4b9f-9c83-a81b6d9e440b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d23be2eb-71f9-4c1d-9978-4d323dd85755-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d3ee7702-045a-4689-a3df-5902d3b8f2dc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d5425158-0506-484a-be61-2677a91f48a0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d5805c18-ee58-424b-934c-dd91aa0bd741-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d736ed34-2f99-4865-8300-785d097b9168-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/d9070596-9d59-44d5-ba5e-a58f3701a622-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/da057296-c811-4fa0-a078-eb0c1ac2cbfc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/da9c257d-0382-4591-ab6a-77ba1c751c86-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/db10444b-f35f-4b98-a1e0-4cf5195b4b00-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/db5280ba-6c24-4546-90ca-70409a4bb51a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/dc873cd8-521f-4b68-acd3-686b8388ef4a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/dc88ad53-069c-4a50-acc8-508884b0dbe2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/de16c0da-f4d8-4ca0-9a7c-71ed34e2b6de-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e041f3b1-f2d9-4b1c-bd06-e74cd0de5009-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e35b169d-03fe-486d-96f9-5c4b1b6a93c8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e4075d0c-133d-4e84-9782-7276624e5d0e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e431a046-6afb-4390-9b74-635d32efb950-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e43474ba-e8b1-474c-8bb5-59260c482e36-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e4e65800-ea92-4c43-881d-4fe6d0a21824-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e4eee037-12de-4ab9-910a-ff265063a085-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e77b53bf-3d2e-4c74-a1e4-125db2fd4a1b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e7b8a33f-aa7b-45a6-80d2-aa57ee6914d3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e810e92c-6b66-4ef4-b8fc-07600cec3aba-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e811aadc-02c3-4bed-81f0-7cb37d5ae5d5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e8f59d9f-f559-4d67-a19c-61787f20ac0f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/e9b9b2c2-79bb-4423-af97-91eb0e1af3a6-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ea1a02ba-ee94-4345-9c5a-1b2ea4fedd53-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ea9ba076-49f2-4ae4-84b1-891e50e8c3f6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/ee56ac5f-18f2-413f-8079-392a8d58c01d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f1123bd7-eb21-4c54-93cd-1deed886370d-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f15e7cfc-04c4-458b-86b6-a9dbf36377c9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f3ae2cbe-3759-480d-9a18-3f16650f8cb6-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f6b11c5a-a782-4a31-bf21-7ca794ecbcb1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f6f12385-891b-4257-9e0c-2546f8137ce1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f8eb0498-7ae4-4539-a132-c2adf9c19647-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/f938d2a3-7b40-41ee-8666-e5715c5af197-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/faeade47-2f66-43a2-9c61-16d24315e97e-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/fbe08199-d932-4953-8861-b26470ff236f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/fd275bf7-86fb-435e-accf-edc1234d9ff6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/fdb81e12-3f81-4825-8ac4-adddc2b50bf8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/fdeb2988-c6eb-44a6-9de9-8a1bbf27a05a-attachment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/reports/results/fe805ff5-70db-4b60-9696-8b3fc28182cb-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report_demo/pages/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/pages/funcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report_demo/utils/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/send_email.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="250">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -290,10 +45,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env_cof.py">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/assert_handle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="-1630">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+              <folding>
+                <element signature="e#16#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#16#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#16#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#16#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -317,23 +111,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
+        <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="375">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
-                <element signature="e#16#25#0" expanded="true" />
-                <element signature="e#95#1067#0" />
+                <element signature="e#16#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="800">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -346,18 +139,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
               <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report_demo/cases/test_session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#16#29#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -434,30 +215,30 @@
         <option value="$PROJECT_DIR$/report_demo/utils/time_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210402.log" />
         <option value="$PROJECT_DIR$/report_demo/config/config.yaml" />
-        <option value="$PROJECT_DIR$/report_demo/utils/send_email.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/yaml_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/post_position_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/tasks.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210403.log" />
-        <option value="$PROJECT_DIR$/report_demo/utils/assert_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/db_service.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/file_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/log_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/request_handle.py" />
         <option value="$PROJECT_DIR$/pytest.ini" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/report_demo/pages/funcs.py" />
         <option value="$PROJECT_DIR$/report_demo/pages/__init__.py" />
         <option value="$PROJECT_DIR$/report_demo/cases/test_mysql.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/base_utils.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/123.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210404.log" />
         <option value="$PROJECT_DIR$/report_demo/constans.py" />
-        <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/report_demo/config/variable.yaml" />
         <option value="$PROJECT_DIR$/env_cof.py" />
         <option value="$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml" />
         <option value="$PROJECT_DIR$/report_demo/cases/test_login.py" />
+        <option value="$PROJECT_DIR$/report_demo/pages/funcs.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/report_demo/utils/assert_handle.py" />
+        <option value="$PROJECT_DIR$/report_demo/utils/send_email.py" />
       </list>
     </option>
   </component>
@@ -486,6 +267,12 @@
               <item name="api_base" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_base" type="462c0819:PsiDirectoryNode" />
               <item name="report_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_base" type="462c0819:PsiDirectoryNode" />
+              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -675,7 +462,7 @@
       <workItem from="1617519528214" duration="6417000" />
       <workItem from="1618237244927" duration="613000" />
       <workItem from="1618281674299" duration="21000" />
-      <workItem from="1618300333287" duration="2963000" />
+      <workItem from="1618300333287" duration="5045000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -709,7 +496,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86334000" />
+    <option name="totallyTimeSpent" value="88416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,13 +570,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="变量区分" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/kombu/transport/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/celery/worker/worker.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/kombu/utils/objects.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -840,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/jsonpath_handle.py" />
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210402.log" />
     <entry file="file://$PROJECT_DIR$/report_demo/cases/test_need.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -866,16 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="e#16#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/yaml_handle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
@@ -892,26 +659,6 @@
           <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/ini_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#16#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/db_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#16#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -973,28 +720,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/assert_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#16#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/123.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/reports/result_dir/index.html" />
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#16#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210404.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1012,16 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
@@ -1073,16 +790,6 @@
     <entry file="file://$PROJECT_DIR$/report_demo/config/variable.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env_cof.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -1124,10 +831,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/assert_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1630">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#16#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/db_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#16#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/ini_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#16#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#16#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#16#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

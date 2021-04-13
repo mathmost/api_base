@@ -96,7 +96,6 @@ def fix_module():
 @pytest.fixture(scope="session")
 def fix_login_session(fix_module):
     """获取登陆后的session"""
-    print("fix_module: ", fix_module)
     yield fix_module
 
 

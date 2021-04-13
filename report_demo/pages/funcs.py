@@ -3,8 +3,14 @@ import allure
 from report_demo.constans import *
 
 
-@allure.step("登录")
+@allure.step("调用登陆接口")
 def login(mobile, password, env_url=None):
+    """
+    调用登陆接口
+    :param mobile: 手机号
+    :param password: 密码
+    :param env_url: 访问地址
+    """
     login_param = case_data.request_param.login_map
     if env_url:
         url = env_url + login_param.get('login')

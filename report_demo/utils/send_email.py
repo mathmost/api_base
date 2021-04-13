@@ -19,7 +19,6 @@ class EmailSend:
         :param file_name: 文件名
         :param _msg: 消息对象
         """
-
         # 文件路径与文件名需要一一对应
         if not all([file_path, file_name]):
             return '文件路径或文件名不能为空'
@@ -71,8 +70,8 @@ class EmailSend:
 
 
 # 测试代码
-# sender = 'xxxxx@163.com'
-# receive = 'xxxxx@qq.com'
+# sender = '123@163.com'
+# receive = '123@qq.com'
 # pass_wd = '123'
 # sub_title = '123'
 # content = '123'

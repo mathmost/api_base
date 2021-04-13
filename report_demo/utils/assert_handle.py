@@ -22,7 +22,7 @@ class Assertion:
     def assert_startswith(cls, data, expected_value):
         """
         校验以预期值开头
-        :param data: 校验的data
+        :param data: 校验的data数据
         :param expected_value: 预期值
         :return:
         """
@@ -82,10 +82,9 @@ class Assertion:
             assert False, "校验值不为空, 值为: {}".format(reality_value)
 
     @classmethod
-    def assert_list_repetition(cls, lists):
+    def assert_list_repetition(cls, lists: list):
         """
         校验列表中是否有重复项
-        :param lists: 列表
         """
         if isinstance(lists, list):
             repetition = {key: value for key, value in dict(Counter(lists)).items() if value > 1}
