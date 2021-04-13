@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/pages/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/pages/funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/assert_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/utils/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report_demo/enents/__init__.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -60,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -72,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#16#41#0" expanded="true" />
               </folding>
@@ -96,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/config/token.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -105,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -114,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -126,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="800">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -138,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/report_demo/cases_data/login.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -272,7 +268,7 @@
               <item name="api_base" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_base" type="462c0819:PsiDirectoryNode" />
               <item name="report_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -462,7 +458,7 @@
       <workItem from="1617519528214" duration="6417000" />
       <workItem from="1618237244927" duration="613000" />
       <workItem from="1618281674299" duration="21000" />
-      <workItem from="1618300333287" duration="5045000" />
+      <workItem from="1618300333287" duration="6460000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -492,11 +488,18 @@
       <option name="project" value="LOCAL" />
       <updated>1618302629840</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改了一些写法，避免歧义">
+      <created>1618307439279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618307439279</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88416000" />
+    <option name="totallyTimeSpent" value="89831000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,7 +570,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置文件修改" />
     <MESSAGE value="变量区分" />
-    <option name="LAST_COMMIT_MESSAGE" value="变量区分" />
+    <MESSAGE value="修改了一些写法，避免歧义" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了一些写法，避免歧义" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/celery/worker/worker.py" />
@@ -800,21 +804,21 @@
     <entry file="file://$PROJECT_DIR$/report_demo/config/token.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/cases_data/login.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -832,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
@@ -842,7 +846,7 @@
     <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
@@ -852,7 +856,7 @@
     <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
@@ -892,7 +896,7 @@
     <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
@@ -905,7 +909,7 @@
     <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#16#41#0" expanded="true" />
           </folding>
