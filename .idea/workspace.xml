@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env_cof.py" beforeDir="false" afterPath="$PROJECT_DIR$/env_cof.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/config/token.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/config/token.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/constans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/enentMange/EventManager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/enentMange/EventTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/enentMange/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/enents/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="175">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -469,7 +461,7 @@
       <workItem from="1617519528214" duration="6417000" />
       <workItem from="1618237244927" duration="613000" />
       <workItem from="1618281674299" duration="21000" />
-      <workItem from="1618300333287" duration="2241000" />
+      <workItem from="1618300333287" duration="2296000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -492,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1618237803353</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="变量区分">
+      <created>1618302629840</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618302629840</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85612000" />
+    <option name="totallyTimeSpent" value="85667000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -566,7 +565,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置文件修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置文件修改" />
+    <MESSAGE value="变量区分" />
+    <option name="LAST_COMMIT_MESSAGE" value="变量区分" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/kombu/transport/base.py">
@@ -910,8 +910,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#16#29#0" expanded="true" />
           </folding>
