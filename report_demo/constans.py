@@ -1,7 +1,7 @@
 # coding: utf-8
-from env_cof import app_cof
-import redis
 import os
+import redis
+from env_cof import (globals_variable, local_variable, app_cof)
 
 
 # 地址路径
@@ -66,10 +66,8 @@ class CaseData:
 
     def __init__(self):
         # 全局变量、环境变量
-        self.globals_variable = {}
-        self.local_variable = {
-            app_cof.BASE_URL: {}
-        }
+        self.globals_variable = globals_variable
+        self.local_variable = local_variable
 
     def globals_set(self, key, value):
         """设置全局变量"""

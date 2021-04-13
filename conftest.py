@@ -89,7 +89,7 @@ def fix_module():
     if app_cof.USE_WRITE_VARIABLE:
         var_handle = RwYaml(f.variableFile)
         var_handle.write_yaml_with_dict(None, case_data.globals_variable)
-        var_handle.write_yaml_with_dict(app_cof.BASE_URL, case_data.local_variable)
+        var_handle.write_yaml_with_dict("locals", case_data.local_variable)
     print("====== end ======")
 
 

@@ -5,7 +5,7 @@ customerA:
 customerB:
   customerB_token: ad005b58-8f4b-42f3-abe2-78311132adf1
 dev:
-  dev_token: 87df140b-b93b-4e3a-8d40-b4076553a228
+  dev_token: 652c85cf-0fc1-45da-b22c-822f41fb0a37
 master:
   master_token: 1d6644b5-4c04-47c2-9160-b22f7c5833af
 pre:

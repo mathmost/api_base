@@ -1,6 +1,10 @@
 # coding: utf-8
 import os
 
+# 以字典定义的全局变量以及局部变量先加载到内存中，方便多环境并行运行，环境变量不冲突
+# 全局变量
+globals_variable = {}
+
 base_dir = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
 # allure报告
 # 本地项目可以写死，如果有部署则填写ip地址即可
@@ -21,8 +25,8 @@ class BaseConfig:
     USE_WRITE_VARIABLE = True
     # email（发件人邮箱以及授权码、发送邮件标题、发送邮件的html地址）
     USE_EMAIL = False
-    SENDER_EMAIL = "XXXXXX@163.com"
-    SENDER_PASSWORD = "SSMIVXVDWDWDWDAXXXXXDARXKHHF"
+    SENDER_EMAIL = "178@163.com"
+    SENDER_PASSWORD = "SSMIVHHF"
     SEND_SUB_TITLE = "本次接口自动化执行完成"
     SEND_EMAIL_HTML = r'{}\index.html'.format(resultDir)
     # mysql
@@ -49,7 +53,7 @@ class DevConfig(BaseConfig):
     # password
     PASSWORD = 123456
     # email（收件人邮箱）
-    RECEIVER_EMAIL = "1196010XXXXXX@qq.com"
+    RECEIVER_EMAIL = "1196010@qq.com"
     # mysql
     USE_MYSQL = False
     # redis
@@ -160,5 +164,11 @@ config_map = {
 
 # 执行环境的配置信息 dev, pre, master
 # 如果需要添加客户信息，则继续添加类继承BaseConfig以及在config_map中添加指向即可
-op_environment = "customerB"
+op_environment = "dev"
+# 环境变量
+local_variable = {
+    config_map.get(op_environment).BASE_URL: {
+
+    }
+}
 app_cof = config_map.get(op_environment)
