@@ -1,7 +1,7 @@
 # coding: utf-8
 import pytest
 import allure
-from report_demo.constans import case_data
+from report_demo.constans import apibase
 
 
 # noinspection PyUnusedLocal
@@ -16,6 +16,6 @@ class TestNeed:
     def test_need(self, need, fix_login, something):
         print("fix_login: ", fix_login, need)
         print("fix_login_json: ", fix_login.text, need)
-        case_data.assert_handle.assert_equal_value(1, 1)
+        apibase.assert_handle.assert_equal_value(1, 1)
 
     pass

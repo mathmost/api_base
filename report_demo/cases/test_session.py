@@ -1,7 +1,7 @@
 # coding: utf-8
 import pytest
 import allure
-from report_demo.constans import case_data
+from report_demo.constans import apibase
 
 
 # noinspection PyUnusedLocal
@@ -19,7 +19,7 @@ class TestSession:
         """
         print("get_after_get_login_session: ", fix_login_session)
         # 获取login用例中设置的全局变量、局部变量
-        print("TestSession获取login用例中设置的全局变量: ", case_data.globals_get('global_login_res'))
-        print("TestSession获取login用例中设置的环境变量: ", case_data.locals_get('local_login_status_code'))
+        print("TestSession获取login用例中设置的全局变量: ", apibase.globals_get('global_login_res'))
+        print("TestSession获取login用例中设置的环境变量: ", apibase.locals_get('local_login_status_code'))
 
-        case_data.assert_handle.assert_equal_value(1, 1)
+        apibase.assert_handle.assert_equal_value(1, 1)

@@ -34,9 +34,9 @@ def env_conf(pytestconfig):
     env_conf = pytestconfig.getoption("--env")
     global_conf = pytestconfig.getini("globalConf")
     if env_conf:
-        env_conf_stream = ReadHandle(case_data.file_handle.file_absolute_path(env_conf))
+        env_conf_stream = ReadHandle(apibase.file_handle.file_absolute_path(env_conf))
         if global_conf:
-            global_cof_stream = ReadHandle(case_data.file_handle.file_absolute_path(global_conf))
+            global_cof_stream = ReadHandle(apibase.file_handle.file_absolute_path(global_conf))
             return {**env_conf_stream.get_yaml_data(), **global_cof_stream.get_yaml_data()}
 
         return env_conf_stream.get_yaml_data()
@@ -88,8 +88,8 @@ def fix_module():
     # 全局以及环境变量写入文件
     if app_cof.USE_WRITE_VARIABLE:
         var_handle = RwYaml(f.variableFile)
-        var_handle.write_yaml_with_dict(None, case_data.globals_variable)
-        var_handle.write_yaml_with_dict("locals", case_data.local_variable)
+        var_handle.write_yaml_with_dict(None, apibase.globals_variable)
+        var_handle.write_yaml_with_dict("locals", apibase.local_variable)
     print("====== end ======")
 
 

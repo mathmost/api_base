@@ -2,7 +2,7 @@
 import os
 import time
 from celery import Celery
-from report_demo.constans import (allure_command, app_cof, case_data)
+from report_demo.constans import (allure_command, app_cof, apibase)
 
 
 broker = 'redis://{}:{}'.format(app_cof.REDIS_HOST, app_cof.REDIS_PORT)
@@ -28,4 +28,4 @@ def execute_command():
 # 发送邮件
 @app.task
 def email_send(sender, receive, pass_wd, sub_title, content, send_type, file_path: list, file_name: list):
-    case_data.email.for_email(sender, receive, pass_wd, sub_title, content, send_type, file_path, file_name)
+    apibase.email.for_email(sender, receive, pass_wd, sub_title, content, send_type, file_path, file_name)

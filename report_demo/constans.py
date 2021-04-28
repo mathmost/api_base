@@ -52,7 +52,7 @@ from report_demo.utils.base_utils import (singleton, SqlData, SqlResult)
 
 # noinspection PyMethodMayBeStatic
 @singleton
-class CaseData:
+class ApiCaseRevolution:
     """
     一、使用单例将当前类中的变量以及对象加载到内存中保存为唯一的内存ID
 
@@ -133,7 +133,7 @@ class CaseData:
     ...
 
 
-case_data = CaseData()
+apibase = ApiCaseRevolution()
 
 # 生成allure报告
 allure_command = "allure generate {} -o {} --clean".format(f.results, f.resultDir)
