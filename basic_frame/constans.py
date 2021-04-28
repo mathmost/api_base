@@ -17,20 +17,20 @@ class FileDir:
     # 顶层目录
     base_dir = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
     # 日志文件
-    proFile = os.path.join(base_dir, r'report_demo')
+    proFile = os.path.join(base_dir, r'basic_frame')
     # allure文件
-    reportDir = os.path.join(base_dir, r'report_demo\reports')
+    reportDir = os.path.join(base_dir, r'basic_frame\reports')
     if not os.path.exists(reportDir):
         os.mkdir(reportDir)
-    results = os.path.join(base_dir, r'report_demo\reports\results')
+    results = os.path.join(base_dir, r'basic_frame\reports\results')
     # allure报告
-    resultDir = os.path.join(base_dir, r'report_demo\reports\result_dir')
+    resultDir = os.path.join(base_dir, r'basic_frame\reports\result_dir')
     # yaml路径
-    yamlFile = os.path.join(base_dir, r'report_demo\cases_data')
+    yamlFile = os.path.join(base_dir, r'basic_frame\cases_data')
     # 登陆后写入和获取的token.yaml文件
-    tokenFile = os.path.join(base_dir, r'report_demo\config\token.yaml')
+    tokenFile = os.path.join(base_dir, r'basic_frame\config\token.yaml')
     # 全局变量以及局部变量文件
-    variableFile = os.path.join(base_dir, r'report_demo\config\variable.yaml')
+    variableFile = os.path.join(base_dir, r'basic_frame\config\variable.yaml')
     # pytest.ini文件路径
     iniDir = os.path.join(base_dir, r'pytest.ini')
 
@@ -39,15 +39,15 @@ f = FileDir()
 
 # 生成app_cof实例对象后导入才生效且不可删除ReadHandle包的导入
 from faker import Faker
-from report_demo.pages import RequestParam
-from report_demo.utils.send_email import EmailSend
-from report_demo.utils.db_service import DBService
+from basic_frame.pages import RequestParam
+from basic_frame.utils.send_email import EmailSend
+from basic_frame.utils.db_service import DBService
 # noinspection PyUnresolvedReferences
-from report_demo.utils.yaml_handle import ReadHandle
-from report_demo.utils.file_handle import GetFilePath
-from report_demo.utils.request_handle import RequestHandle
-from report_demo.utils.assert_handle import Assertion
-from report_demo.utils.base_utils import (singleton, SqlData, SqlResult)
+from basic_frame.utils.yaml_handle import ReadHandle
+from basic_frame.utils.file_handle import GetFilePath
+from basic_frame.utils.request_handle import RequestHandle
+from basic_frame.utils.assert_handle import Assertion
+from basic_frame.utils.base_utils import (singleton, SqlData, SqlResult)
 
 
 # noinspection PyMethodMayBeStatic

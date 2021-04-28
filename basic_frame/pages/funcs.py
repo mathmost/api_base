@@ -1,6 +1,6 @@
 # coding: utf-8
 import allure
-from report_demo.constans import *
+from basic_frame.constans import *
 
 
 @allure.step("调用登陆接口")

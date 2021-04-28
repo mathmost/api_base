@@ -1,5 +1,5 @@
 # coding: utf-8
-from report_demo.constans import f
+from basic_frame.constans import f
 import configparser
 
 

@@ -1,5 +1,5 @@
 # coding: utf-8
-from report_demo.utils.base_utils import singleton
+from basic_frame.utils.base_utils import singleton
 
 
 @singleton

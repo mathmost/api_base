@@ -1,8 +1,8 @@
 # coding: utf-8
 import pytest
 import allure
-from report_demo.pages.funcs import login
-from report_demo.constans import apibase
+from basic_frame.pages.funcs import login
+from basic_frame.constans import apibase
 
 
 # noinspection PyUnusedLocal

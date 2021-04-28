@@ -2,8 +2,8 @@
 import base64
 import hashlib
 import subprocess
-from report_demo.constans import f
-from report_demo.utils.yaml_handle import ReadHandle
+from basic_frame.constans import f
+from basic_frame.utils.yaml_handle import ReadHandle
 
 
 # noinspection PyUnusedLocal

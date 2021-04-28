@@ -2,7 +2,7 @@
 import os
 import time
 from celery import Celery
-from report_demo.constans import (allure_command, app_cof, apibase)
+from basic_frame.constans import (allure_command, app_cof, apibase)
 
 
 broker = 'redis://{}:{}'.format(app_cof.REDIS_HOST, app_cof.REDIS_PORT)

@@ -1,10 +1,10 @@
 # coding: utf-8
 import pytest
-from report_demo.utils.yaml_handle import RwYaml
-from report_demo.tasks import *
-from report_demo.utils.time_handle import get_time
-from report_demo.pages.funcs import login
-from report_demo.constans import *
+from basic_frame.utils.yaml_handle import RwYaml
+from basic_frame.tasks import *
+from basic_frame.utils.time_handle import get_time
+from basic_frame.pages.funcs import login
+from basic_frame.constans import *
 from setting import op_environment
 from _pytest.fixtures import SubRequest
 import os
