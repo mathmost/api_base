@@ -5,7 +5,7 @@ from report_demo.tasks import *
 from report_demo.utils.time_handle import get_time
 from report_demo.pages.funcs import login
 from report_demo.constans import *
-from env_cof import op_environment
+from setting import op_environment
 from _pytest.fixtures import SubRequest
 import os
 

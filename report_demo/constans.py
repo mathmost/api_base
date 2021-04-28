@@ -1,7 +1,7 @@
 # coding: utf-8
 import os
 import redis
-from env_cof import (globals_variable, local_variable, app_cof)
+from setting import (globals_variable, local_variable, app_cof)
 
 
 # 地址路径
