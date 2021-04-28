@@ -1,0 +1,5 @@
+[2021-04-28 18:56:37,671][test_login.py 23][INFO]: login_mobile: None, login_password: 123456
+[2021-04-28 18:56:37,740][test_login.py 23][INFO]: login_mobile: 17802156775, login_password: None
+[2021-04-28 18:56:37,836][test_login.py 23][INFO]: login_mobile: 178021567751, login_password: 123456
+[2021-04-28 18:56:37,917][test_login.py 23][INFO]: login_mobile: 17802156775, login_password: 123456789
+[2021-04-28 18:56:38,014][test_login.py 23][INFO]: login_mobile: 17802156775, login_password: 123456
