@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a65fe6ce-328a-4df0-b15d-6d47fb2a14d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env_cof.py" beforeDir="false" afterPath="$PROJECT_DIR$/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report_demo/constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/constans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/logs/20210404.log" beforeDir="false" afterPath="$PROJECT_DIR$/report_demo/utils/downloadBibiliVideo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/logs/20210412.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report_demo/logs/20210413.log" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+            <state relative-caret-position="925">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#16#29#0" expanded="true" />
               </folding>
@@ -46,23 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-              <folding>
-                <element signature="e#16#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -71,7 +54,79 @@
         <entry file="file://$PROJECT_DIR$/report_demo/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#16#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#16#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/time_handle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1875">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
+              <folding>
+                <element signature="e#16#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#16#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report_demo/utils/yaml_handle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#16#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+              <folding>
+                <element signature="e#16#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,9 +165,11 @@
       <find>login_data:</find>
       <find>inheritance_config</find>
       <find>USE_MYSQL</find>
+      <find>case_data</find>
     </findStrings>
     <replaceStrings>
       <replace>new_async</replace>
+      <replace>apibase</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -122,8 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/report_demo/yaml_files/login.yaml" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_get_result.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/test.yaml" />
         <option value="$PROJECT_DIR$/../ini_read.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/ini_handle.py" />
@@ -136,13 +191,10 @@
         <option value="$PROJECT_DIR$/report_demo/run.py" />
         <option value="$PROJECT_DIR$/report_demo/yaml_files/sql_sentence.yaml" />
         <option value="$PROJECT_DIR$/report_demo/cases/__init__.py" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_need.py" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_result.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/allure_handle.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/kombu/transport/redis.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/celery/worker/worker.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/celery/utils/timer2.py" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_session.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/time_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210402.log" />
         <option value="$PROJECT_DIR$/report_demo/config/config.yaml" />
@@ -157,22 +209,27 @@
         <option value="$PROJECT_DIR$/pytest.ini" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/report_demo/pages/__init__.py" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_mysql.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/base_utils.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/123.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210404.log" />
-        <option value="$PROJECT_DIR$/report_demo/constans.py" />
         <option value="$PROJECT_DIR$/report_demo/cases_data/sql_sentence.yaml" />
-        <option value="$PROJECT_DIR$/report_demo/cases/test_login.py" />
-        <option value="$PROJECT_DIR$/report_demo/pages/funcs.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/assert_handle.py" />
         <option value="$PROJECT_DIR$/report_demo/utils/send_email.py" />
         <option value="$PROJECT_DIR$/report_demo/config/variable.yaml" />
         <option value="$PROJECT_DIR$/env_cof.py" />
         <option value="$PROJECT_DIR$/report_demo/config/token.yaml" />
         <option value="$PROJECT_DIR$/report_demo/utils/downloadBibiliVideo.py" />
-        <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/report_demo/logs/20210415.log" />
+        <option value="$PROJECT_DIR$/setting.py" />
+        <option value="$PROJECT_DIR$/report_demo/cases/test_login.py" />
+        <option value="$PROJECT_DIR$/report_demo/cases/test_mysql.py" />
+        <option value="$PROJECT_DIR$/report_demo/cases/test_need.py" />
+        <option value="$PROJECT_DIR$/report_demo/cases/test_result.py" />
+        <option value="$PROJECT_DIR$/report_demo/cases/test_session.py" />
+        <option value="$PROJECT_DIR$/report_demo/pages/funcs.py" />
+        <option value="$PROJECT_DIR$/report_demo/tasks.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/report_demo/constans.py" />
       </list>
     </option>
   </component>
@@ -208,6 +265,12 @@
               <item name="api_base" type="462c0819:PsiDirectoryNode" />
               <item name="report_demo" type="462c0819:PsiDirectoryNode" />
               <item name="cases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_base" type="462c0819:PsiDirectoryNode" />
+              <item name="report_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,7 +464,8 @@
       <workItem from="1618542634965" duration="67000" />
       <workItem from="1619428930559" duration="1247000" />
       <workItem from="1619484484016" duration="3737000" />
-      <workItem from="1619599544616" duration="1593000" />
+      <workItem from="1619599544616" duration="4481000" />
+      <workItem from="1619606643547" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="配置文件修改">
       <created>1617494209632</created>
@@ -452,11 +516,25 @@
       <option name="project" value="LOCAL" />
       <updated>1618481662840</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改用法">
+      <created>1619603778739</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619603778739</updated>
+    </task>
+    <task id="LOCAL-00009" summary="规范变量名称">
+      <created>1619606361302</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619606361302</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97774000" />
+    <option name="totallyTimeSpent" value="100675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,7 +549,7 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28114665" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28445426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -530,7 +608,9 @@
     <MESSAGE value="修改了一些写法，避免歧义" />
     <MESSAGE value="修改文件名称" />
     <MESSAGE value="new computer" />
-    <option name="LAST_COMMIT_MESSAGE" value="new computer" />
+    <MESSAGE value="修改用法" />
+    <MESSAGE value="规范变量名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="规范变量名称" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/report_demo/tasks/post_position_handle.py" />
@@ -547,83 +627,13 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/kombu/__init__.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/celery/utils/timer2.py" />
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/jsonpath_handle.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210402.log" />
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_need.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/tasks.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/cases_data/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210403.log" />
-    <entry file="file://$PROJECT_DIR$/report_demo/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/yaml_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/time_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/file_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/log_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#16#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/request_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#16#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -634,29 +644,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/123.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/reports/result_dir/index.html" />
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210404.log" />
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/excel_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/pages/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -664,153 +654,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/enentMange/EventManager.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/enentMange/EventTest.py" />
     <entry file="file://$PROJECT_DIR$/report_demo/enents/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/ini_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#16#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/assert_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="e#16#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#16#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report_demo/cases_data/login.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#16#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/db_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#16#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/utils/downloadBibiliVideo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#16#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_mysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,10 +697,240 @@
     <entry file="file://$PROJECT_DIR$/report_demo/logs/20210415.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_need.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/cases/test_session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/pages/funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/assert_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#16#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/base_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/downloadBibiliVideo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/excel_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/file_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/ini_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#16#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/log_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#16#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/request_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#16#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/db_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#16#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        <state relative-caret-position="375">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#16#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/time_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/xml_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#16#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/utils/yaml_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_demo/constans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

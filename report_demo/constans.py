@@ -55,6 +55,7 @@ from report_demo.utils.base_utils import (singleton, SqlData, SqlResult)
 class ApiCaseRevolution:
     """
     一、使用单例将当前类中的变量以及对象加载到内存中保存为唯一的内存ID
+        后续考虑加锁
 
     二、提取所有公共对象，将配置文件做到统一管理，避免:
         1. 用例过多重复读取数据
@@ -90,7 +91,7 @@ class ApiCaseRevolution:
         return local_res
 
     # faker随机数据对象
-    fak = Faker('zh_CN')
+    faker = Faker('zh_CN')
 
     # 公共断言类对象
     assert_handle = Assertion()
