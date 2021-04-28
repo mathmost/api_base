@@ -22,7 +22,7 @@ class BaseConfig:
     # password
     PASSWORD = 123456
     # 是否在运行完成后写入变量值
-    USE_WRITE_VARIABLE = True
+    USE_WRITE_VARIABLE = False
     # email（发件人邮箱以及授权码、发送邮件标题、发送邮件的html地址）
     USE_EMAIL = False
     SENDER_EMAIL = "178@163.com"
