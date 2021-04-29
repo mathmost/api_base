@@ -42,7 +42,6 @@ class BaseConfig:
     REDIS_PORT = 6379
     REDIS_NODE = 0
     # mongo
-
     ...
 
 
@@ -152,23 +151,40 @@ CustomerC_Config = cus.set_customer('CustomerCConfig',
                                     MOBILE=18012378945,
                                     PASSWORD=123456)
 
-# config类指向
-config_map = {
-    "dev": DevConfig,
-    "pre": PreConfig,
-    "master": MasterConfig,
-    "customerA": CustomerA_Config,
-    "customerB": CustomerB_Config,
-    "customerC": CustomerC_Config
-}
 
-# 执行环境的配置信息 dev, pre, master
-# 如果需要添加客户信息，则继续添加类继承BaseConfig以及在config_map中添加指向即可
-op_environment = "dev"
+class Enter:
+
+    def __init__(self):
+        self.local = {}
+        self.config_map = {
+            "dev": DevConfig,
+            "pre": PreConfig,
+            "master": MasterConfig,
+            "customerA": CustomerA_Config,
+            "customerB": CustomerB_Config,
+            "customerC": CustomerC_Config
+        }
+        # 客户配置信息
+        # op_environment: 执行环境
+        # is_use: 是否执行
+        # description: 企业描述信息
+        # 如果是批量执行，则依次往下执行
+        self.enters = {
+            "op_environment": "dev",
+            "is_use": True,
+            "description": "这是一个客户描述信息"
+        }
+        if self.enters.get('is_use'):
+            self.app_cof = self.config_map.get(self.enters.get('op_environment'))
+            self.local[self.app_cof.BASE_URL] = {}
+        else:
+            raise Exception("please running environment")
+
+
+ent = Enter()
+# 执行环境
+op_environment = ent.enters.get('op_environment')
 # 环境变量
-local_variable = {
-    config_map.get(op_environment).BASE_URL: {
-
-    }
-}
-app_cof = config_map.get(op_environment)
+local_variable = ent.local
+# app_cof
+app_cof = ent.app_cof
