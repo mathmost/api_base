@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <style>body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	/* do not increase min-width as some may use split screens */
+	min-width: 800px;
+	color: #999;
+}
+
+h1 {
+	font-size: 24px;
+	color: black;
+}
+
+h2 {
+	font-size: 16px;
+	color: black;
+}
+
+p {
+    color: black;
+}
+
+a {
+	color: #999;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+
+#environment td {
+	padding: 5px;
+	border: 1px solid #E6E6E6;
+}
+
+#environment tr:nth-child(odd) {
+	background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed, .passed .col-result {
+	color: green;
+}
+span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
+	color: orange;
+}
+span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
+	color: red;
+}
+
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+
+#results-table {
+	border: 1px solid #e6e6e6;
+	color: #999;
+	font-size: 12px;
+	width: 100%
+}
+
+#results-table th, #results-table td {
+	padding: 5px;
+	border: 1px solid #E6E6E6;
+	text-align: left
+}
+#results-table th {
+	font-weight: bold
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+
+.log:only-child {
+	height: inherit
+}
+.log {
+	background-color: #e6e6e6;
+	border: 1px solid #e6e6e6;
+	color: black;
+	display: block;
+	font-family: "Courier New", Courier, monospace;
+	height: 230px;
+	overflow-y: scroll;
+	padding: 5px;
+	white-space: pre-wrap
+}
+div.image {
+	border: 1px solid #e6e6e6;
+	float: right;
+	height: 240px;
+	margin-left: 5px;
+	overflow: hidden;
+	width: 320px
+}
+div.image img {
+	width: 320px
+}
+div.video {
+	border: 1px solid #e6e6e6;
+	float: right;
+	height: 240px;
+	margin-left: 5px;
+	overflow: hidden;
+	width: 320px
+}
+div.video video {
+	overflow: hidden;
+	width: 320px;
+    height: 240px;
+}
+.collapsed {
+	display: none;
+}
+.expander::after {
+	content: " (show details)";
+	color: #BBB;
+	font-style: italic;
+	cursor: pointer;
+}
+.collapser::after {
+	content: " (hide details)";
+	color: #BBB;
+	font-style: italic;
+	cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+	cursor: pointer;
+}
+
+.sort-icon {
+	font-size: 0px;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	/*triangle*/
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+
+.inactive .sort-icon {
+	/*finish triangle*/
+	border-top: 8px solid #E6E6E6;
+}
+
+.asc.active .sort-icon {
+	/*finish triangle*/
+	border-bottom: 8px solid #999;
+}
+
+.desc.active .sort-icon {
+	/*finish triangle*/
+	border-top: 8px solid #999;
+}
+</style></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (extras.classList.contains("collapsed")) {
+            expandcollapse.classList.add("expander")
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 29-Apr-2021 at 18:13:25 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_221</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.3"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.19041-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"Faker": "8.1.0", "allure-pytest": "2.8.36", "forked": "1.3.0", "html": "2.1.1", "metadata": "1.11.0", "ordering": "0.6", "xdist": "2.2.1"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.7.2</td></tr></table>
+    <h2>Summary</h2>
+    <p>13 tests ran in 65.64 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">11 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">basic_frame/cases/test_session.py::TestSession::test_login_session::teardown</td>
+          <td class="col-duration">63.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def connect(self):<br/>        &quot;Connects to the Redis server if not already connected&quot;<br/>        if self._sock:<br/>            return<br/>        try:<br/>&gt;           sock = self._connect()<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:559: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def _connect(self):<br/>        &quot;Create a TCP socket connection&quot;<br/>        # we want to mimic what socket.create_connection does to support<br/>        # ipv4/ipv6, but we want to set options prior to calling<br/>        # socket.connect()<br/>        err = None<br/>        for res in socket.getaddrinfo(self.host, self.port, self.socket_type,<br/>                                      socket.SOCK_STREAM):<br/>            family, socktype, proto, canonname, socket_address = res<br/>            sock = None<br/>            try:<br/>                sock = socket.socket(family, socktype, proto)<br/>                # TCP_NODELAY<br/>                sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)<br/>    <br/>                # TCP_KEEPALIVE<br/>                if self.socket_keepalive:<br/>                    sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)<br/>                    for k, v in iteritems(self.socket_keepalive_options):<br/>                        sock.setsockopt(socket.IPPROTO_TCP, k, v)<br/>    <br/>                # set the socket_connect_timeout before we connect<br/>                sock.settimeout(self.socket_connect_timeout)<br/>    <br/>                # connect<br/>                sock.connect(socket_address)<br/>    <br/>                # set the socket_timeout now that we&#x27;re connected<br/>                sock.settimeout(self.socket_timeout)<br/>                return sock<br/>    <br/>            except socket.error as _:<br/>                err = _<br/>                if sock is not None:<br/>                    sock.close()<br/>    <br/>        if err is not None:<br/>&gt;           raise err<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:615: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def _connect(self):<br/>        &quot;Create a TCP socket connection&quot;<br/>        # we want to mimic what socket.create_connection does to support<br/>        # ipv4/ipv6, but we want to set options prior to calling<br/>        # socket.connect()<br/>        err = None<br/>        for res in socket.getaddrinfo(self.host, self.port, self.socket_type,<br/>                                      socket.SOCK_STREAM):<br/>            family, socktype, proto, canonname, socket_address = res<br/>            sock = None<br/>            try:<br/>                sock = socket.socket(family, socktype, proto)<br/>                # TCP_NODELAY<br/>                sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)<br/>    <br/>                # TCP_KEEPALIVE<br/>                if self.socket_keepalive:<br/>                    sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)<br/>                    for k, v in iteritems(self.socket_keepalive_options):<br/>                        sock.setsockopt(socket.IPPROTO_TCP, k, v)<br/>    <br/>                # set the socket_connect_timeout before we connect<br/>                sock.settimeout(self.socket_connect_timeout)<br/>    <br/>                # connect<br/>&gt;               sock.connect(socket_address)<br/><span class="error">E               ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。</span><br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:603: ConnectionRefusedError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/><br/>    @contextmanager<br/>    def reconnect_on_error(self):<br/>        try:<br/>&gt;           yield<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:117: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/>task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;<br/><br/>    def _consume_from(self, task_id):<br/>        key = self._get_key_for_task(task_id)<br/>        if key not in self.subscribed_to:<br/>            self.subscribed_to.add(key)<br/>            with self.reconnect_on_error():<br/>&gt;               self._pubsub.subscribe(key)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:167: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;redis.client.PubSub object at 0x00000213B26AC198&gt;<br/>args = [b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;], kwargs = {}<br/>new_channels = {b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;: None}<br/><br/>    def subscribe(self, *args, **kwargs):<br/>        &quot;&quot;&quot;<br/>        Subscribe to channels. Channels supplied as keyword arguments expect<br/>        a channel name as the key and a callable as the value. A channel&#x27;s<br/>        callable will be invoked automatically when a message is received on<br/>        that channel rather than producing a message via ``listen()`` or<br/>        ``get_message()``.<br/>        &quot;&quot;&quot;<br/>        if args:<br/>            args = list_or_args(args[0], args[1:])<br/>        new_channels = dict.fromkeys(args)<br/>        new_channels.update(kwargs)<br/>&gt;       ret_val = self.execute_command(&#x27;SUBSCRIBE&#x27;, *iterkeys(new_channels))<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py:3580: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;redis.client.PubSub object at 0x00000213B26AC198&gt;<br/>args = (&#x27;SUBSCRIBE&#x27;, b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;)<br/><br/>    def execute_command(self, *args):<br/>        &quot;Execute a publish/subscribe command&quot;<br/>    <br/>        # NOTE: don&#x27;t parse the response in this function -- it could pull a<br/>        # legitimate message off the stack if the connection is already<br/>        # subscribed to one or more channels<br/>    <br/>        if self.connection is None:<br/>            self.connection = self.connection_pool.get_connection(<br/>                &#x27;pubsub&#x27;,<br/>&gt;               self.shard_hint<br/>            )<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py:3468: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = ConnectionPool&lt;Connection&lt;host=127.0.0.1,port=6379,db=0&gt;&gt;<br/>command_name = &#x27;pubsub&#x27;, keys = (None,), options = {}<br/>connection = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def get_connection(self, command_name, *keys, **options):<br/>        &quot;Get a connection from the pool&quot;<br/>        self._checkpid()<br/>        with self._lock:<br/>            try:<br/>                connection = self._available_connections.pop()<br/>            except IndexError:<br/>                connection = self.make_connection()<br/>            self._in_use_connections.add(connection)<br/>    <br/>        try:<br/>            # ensure this connection is connected to Redis<br/>&gt;           connection.connect()<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:1192: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def connect(self):<br/>        &quot;Connects to the Redis server if not already connected&quot;<br/>        if self._sock:<br/>            return<br/>        try:<br/>            sock = self._connect()<br/>        except socket.timeout:<br/>            raise TimeoutError(&quot;Timeout connecting to server&quot;)<br/>        except socket.error as e:<br/>&gt;           raise ConnectionError(self._error_message(e))<br/><span class="error">E           redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.</span><br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:563: ConnectionError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def connect(self):<br/>        &quot;Connects to the Redis server if not already connected&quot;<br/>        if self._sock:<br/>            return<br/>        try:<br/>&gt;           sock = self._connect()<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:559: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def _connect(self):<br/>        &quot;Create a TCP socket connection&quot;<br/>        # we want to mimic what socket.create_connection does to support<br/>        # ipv4/ipv6, but we want to set options prior to calling<br/>        # socket.connect()<br/>        err = None<br/>        for res in socket.getaddrinfo(self.host, self.port, self.socket_type,<br/>                                      socket.SOCK_STREAM):<br/>            family, socktype, proto, canonname, socket_address = res<br/>            sock = None<br/>            try:<br/>                sock = socket.socket(family, socktype, proto)<br/>                # TCP_NODELAY<br/>                sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)<br/>    <br/>                # TCP_KEEPALIVE<br/>                if self.socket_keepalive:<br/>                    sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)<br/>                    for k, v in iteritems(self.socket_keepalive_options):<br/>                        sock.setsockopt(socket.IPPROTO_TCP, k, v)<br/>    <br/>                # set the socket_connect_timeout before we connect<br/>                sock.settimeout(self.socket_connect_timeout)<br/>    <br/>                # connect<br/>                sock.connect(socket_address)<br/>    <br/>                # set the socket_timeout now that we&#x27;re connected<br/>                sock.settimeout(self.socket_timeout)<br/>                return sock<br/>    <br/>            except socket.error as _:<br/>                err = _<br/>                if sock is not None:<br/>                    sock.close()<br/>    <br/>        if err is not None:<br/>&gt;           raise err<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:615: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def _connect(self):<br/>        &quot;Create a TCP socket connection&quot;<br/>        # we want to mimic what socket.create_connection does to support<br/>        # ipv4/ipv6, but we want to set options prior to calling<br/>        # socket.connect()<br/>        err = None<br/>        for res in socket.getaddrinfo(self.host, self.port, self.socket_type,<br/>                                      socket.SOCK_STREAM):<br/>            family, socktype, proto, canonname, socket_address = res<br/>            sock = None<br/>            try:<br/>                sock = socket.socket(family, socktype, proto)<br/>                # TCP_NODELAY<br/>                sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)<br/>    <br/>                # TCP_KEEPALIVE<br/>                if self.socket_keepalive:<br/>                    sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)<br/>                    for k, v in iteritems(self.socket_keepalive_options):<br/>                        sock.setsockopt(socket.IPPROTO_TCP, k, v)<br/>    <br/>                # set the socket_connect_timeout before we connect<br/>                sock.settimeout(self.socket_connect_timeout)<br/>    <br/>                # connect<br/>&gt;               sock.connect(socket_address)<br/><span class="error">E               ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。</span><br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:603: ConnectionRefusedError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;Connection: redis://127.0.0.1:6379// at 0x213b266a668&gt;<br/>ConnectionError = &lt;class &#x27;kombu.exceptions.OperationalError&#x27;&gt;<br/>ChannelError = &lt;class &#x27;kombu.exceptions.OperationalError&#x27;&gt;<br/><br/>    @contextmanager<br/>    def _reraise_as_library_errors(<br/>            self,<br/>            ConnectionError=exceptions.OperationalError,<br/>            ChannelError=exceptions.OperationalError):<br/>        try:<br/>&gt;           yield<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\kombu\connection.py:448: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;Celery tasks at 0x213b1005358&gt;<br/>name = &#x27;basic_frame.tasks.execute_command&#x27;, args = (), kwargs = {}<br/>countdown = None, eta = None, task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;<br/>producer = None, connection = None<br/>router = &lt;celery.app.routes.Router object at 0x00000213B25F1390&gt;<br/>result_cls = &lt;bound method Task.AsyncResult of &lt;@task: basic_frame.tasks.execute_command of tasks at 0x213b1005358&gt;&gt;<br/>expires = None, publisher = None, link = None, link_error = None<br/>add_to_parent = True, group_id = None, group_index = None, retries = 0<br/>chord = None, reply_to = None, time_limit = None, soft_time_limit = None<br/>root_id = None, parent_id = None, route_name = None, shadow = None, chain = None<br/>task_type = &lt;@task: basic_frame.tasks.execute_command of tasks at 0x213b1005358&gt;<br/>options = {&#x27;queue&#x27;: &lt;unbound Queue celery -&gt; &lt;unbound Exchange celery(direct)&gt; -&gt; celery&gt;, &#x27;serializer&#x27;: &#x27;json&#x27;}<br/>parent = None, have_parent = None<br/>amqp = &lt;celery.app.amqp.AMQP object at 0x00000213B25D6198&gt;<br/>conf = Settings({&#x27;BROKER_URL&#x27;: &#x27;redis://127.0.0.1:6379&#x27;, &#x27;deprecated_settings&#x27;: {&#x27;CELERY_RESULT_BACKEND&#x27;, &#x27;CELERY_ACCEPT_CONT...age)s&#x27;, &#x27;CELERYD_TIMER&#x27;: None, &#x27;CELERYD_TIMER_PRECISION&#x27;: 1.0, &#x27;deprecated_settings&#x27;: None, &#x27;CELERY_ENABLE_UTC&#x27;: True})<br/>ignored_result = False<br/>message = task_message(headers={&#x27;lang&#x27;: &#x27;py&#x27;, &#x27;task&#x27;: &#x27;basic_frame.tasks.execute_command&#x27;, &#x27;id&#x27;: &#x27;2fddb8fe-e872-4a73-ad78-6218c6...c2-1873239c40af&#x27;}, body=((), {}, {&#x27;callbacks&#x27;: None, &#x27;errbacks&#x27;: None, &#x27;chain&#x27;: None, &#x27;chord&#x27;: None}), sent_event=None)<br/>P = &lt;Producer: None&gt;<br/><br/>    def send_task(self, name, args=None, kwargs=None, countdown=None,<br/>                  eta=None, task_id=None, producer=None, connection=None,<br/>                  router=None, result_cls=None, expires=None,<br/>                  publisher=None, link=None, link_error=None,<br/>                  add_to_parent=True, group_id=None, group_index=None,<br/>                  retries=0, chord=None,<br/>                  reply_to=None, time_limit=None, soft_time_limit=None,<br/>                  root_id=None, parent_id=None, route_name=None,<br/>                  shadow=None, chain=None, task_type=None, **options):<br/>        &quot;&quot;&quot;Send task by name.<br/>    <br/>        Supports the same arguments as :meth:`@-Task.apply_async`.<br/>    <br/>        Arguments:<br/>            name (str): Name of task to call (e.g., `&quot;tasks.add&quot;`).<br/>            result_cls (AsyncResult): Specify custom result class.<br/>        &quot;&quot;&quot;<br/>        parent = have_parent = None<br/>        amqp = self.amqp<br/>        task_id = task_id or uuid()<br/>        producer = producer or publisher  # XXX compat<br/>        router = router or amqp.router<br/>        conf = self.conf<br/>        if conf.task_always_eager:  # pragma: no cover<br/>            warnings.warn(AlwaysEagerIgnored(<br/>                &#x27;task_always_eager has no effect on send_task&#x27;,<br/>            ), stacklevel=2)<br/>    <br/>        ignored_result = options.pop(&#x27;ignore_result&#x27;, False)<br/>        options = router.route(<br/>            options, route_name or name, args, kwargs, task_type)<br/>    <br/>        if not root_id or not parent_id:<br/>            parent = self.current_worker_task<br/>            if parent:<br/>                if not root_id:<br/>                    root_id = parent.request.root_id or parent.request.id<br/>                if not parent_id:<br/>                    parent_id = parent.request.id<br/>    <br/>                if conf.task_inherit_parent_priority:<br/>                    options.setdefault(&#x27;priority&#x27;,<br/>                                       parent.request.delivery_info.get(&#x27;priority&#x27;))<br/>    <br/>        message = amqp.create_task_message(<br/>            task_id, name, args, kwargs, countdown, eta, group_id, group_index,<br/>            expires, retries, chord,<br/>            maybe_list(link), maybe_list(link_error),<br/>            reply_to or self.thread_oid, time_limit, soft_time_limit,<br/>            self.conf.task_send_sent_event,<br/>            root_id, parent_id, shadow, chain,<br/>            argsrepr=options.get(&#x27;argsrepr&#x27;),<br/>            kwargsrepr=options.get(&#x27;kwargsrepr&#x27;),<br/>        )<br/>    <br/>        if connection:<br/>            producer = amqp.Producer(connection, auto_declare=False)<br/>    <br/>        with self.producer_or_acquire(producer) as P:<br/>            with P.connection._reraise_as_library_errors():<br/>                if not ignored_result:<br/>&gt;                   self.backend.on_task_call(P, task_id)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\app\base.py:748: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.RedisBackend object at 0x00000213B266A710&gt;<br/>producer = &lt;Producer: None&gt;, task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;<br/><br/>    def on_task_call(self, producer, task_id):<br/>        if not task_join_will_block():<br/>&gt;           self.result_consumer.consume_from(task_id)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:343: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/>task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;<br/><br/>    def consume_from(self, task_id):<br/>        if self._pubsub is None:<br/>&gt;           return self.start(task_id)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:159: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/>initial_task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;, kwargs = {}<br/><br/>    def start(self, initial_task_id, **kwargs):<br/>        self._pubsub = self.backend.client.pubsub(<br/>            ignore_subscribe_messages=True,<br/>        )<br/>&gt;       self._consume_from(initial_task_id)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:137: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/>task_id = &#x27;2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;<br/><br/>    def _consume_from(self, task_id):<br/>        key = self._get_key_for_task(task_id)<br/>        if key not in self.subscribed_to:<br/>            self.subscribed_to.add(key)<br/>            with self.reconnect_on_error():<br/>&gt;               self._pubsub.subscribe(key)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:167: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;contextlib._GeneratorContextManager object at 0x00000213B26B14E0&gt;<br/>type = &lt;class &#x27;redis.exceptions.ConnectionError&#x27;&gt;<br/>value = ConnectionError(&#x27;Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.&#x27;)<br/>traceback = &lt;traceback object at 0x00000213B26B2C08&gt;<br/><br/>    def __exit__(self, type, value, traceback):<br/>        if type is None:<br/>            try:<br/>                next(self.gen)<br/>            except StopIteration:<br/>                return False<br/>            else:<br/>                raise RuntimeError(&quot;generator didn&#x27;t stop&quot;)<br/>        else:<br/>            if value is None:<br/>                # Need to force instantiation so we can reliably<br/>                # tell if we get the same exception back<br/>                value = type()<br/>            try:<br/>&gt;               self.gen.throw(type, value, traceback)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\contextlib.py:130: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/><br/>    @contextmanager<br/>    def reconnect_on_error(self):<br/>        try:<br/>            yield<br/>        except self._connection_errors:<br/>            try:<br/>&gt;               self._ensure(self._reconnect_pubsub, ())<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:120: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.RedisBackend object at 0x00000213B266A710&gt;<br/>fun = &lt;bound method ResultConsumer._reconnect_pubsub of &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;&gt;<br/>args = (), policy = {}<br/>retry_policy = {&#x27;interval_max&#x27;: 1, &#x27;interval_start&#x27;: 0, &#x27;interval_step&#x27;: 1, &#x27;max_retries&#x27;: 20}<br/>max_retries = 20<br/><br/>    def ensure(self, fun, args, **policy):<br/>        retry_policy = dict(self.retry_policy, **policy)<br/>        max_retries = retry_policy.get(&#x27;max_retries&#x27;)<br/>        return retry_over_time(<br/>            fun, self.connection_errors, args, {},<br/>            partial(self.on_connection_error, max_retries),<br/>&gt;           **retry_policy)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:357: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>fun = &lt;bound method ResultConsumer._reconnect_pubsub of &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;&gt;<br/>catch = (&lt;class &#x27;amqp.exceptions.ConnectionError&#x27;&gt;, &lt;class &#x27;kombu.exceptions.InconsistencyError&#x27;&gt;, &lt;class &#x27;OSError&#x27;&gt;, &lt;class &#x27;OSError&#x27;&gt;, &lt;class &#x27;OSError&#x27;&gt;, &lt;class &#x27;redis.exceptions.ConnectionError&#x27;&gt;, ...)<br/>args = [], kwargs = {}<br/>errback = functools.partial(&lt;bound method RedisBackend.on_connection_error of &lt;celery.backends.redis.RedisBackend object at 0x00000213B266A710&gt;&gt;, 20)<br/>max_retries = 20, interval_start = 0, interval_step = 1, interval_max = 1<br/>callback = None, timeout = None<br/><br/>    def retry_over_time(fun, catch, args=None, kwargs=None, errback=None,<br/>                        max_retries=None, interval_start=2, interval_step=2,<br/>                        interval_max=30, callback=None, timeout=None):<br/>        &quot;&quot;&quot;Retry the function over and over until max retries is exceeded.<br/>    <br/>        For each retry we sleep a for a while before we try again, this interval<br/>        is increased for every retry until the max seconds is reached.<br/>    <br/>        Arguments:<br/>            fun (Callable): The function to try<br/>            catch (Tuple[BaseException]): Exceptions to catch, can be either<br/>                tuple or a single exception class.<br/>    <br/>        Keyword Arguments:<br/>            args (Tuple): Positional arguments passed on to the function.<br/>            kwargs (Dict): Keyword arguments passed on to the function.<br/>            errback (Callable): Callback for when an exception in ``catch``<br/>                is raised.  The callback must take three arguments:<br/>                ``exc``, ``interval_range`` and ``retries``, where ``exc``<br/>                is the exception instance, ``interval_range`` is an iterator<br/>                which return the time in seconds to sleep next, and ``retries``<br/>                is the number of previous retries.<br/>            max_retries (int): Maximum number of retries before we give up.<br/>                If neither of this and timeout is set, we will retry forever.<br/>                If one of this and timeout is reached, stop.<br/>            interval_start (float): How long (in seconds) we start sleeping<br/>                between retries.<br/>            interval_step (float): By how much the interval is increased for<br/>                each retry.<br/>            interval_max (float): Maximum number of seconds to sleep<br/>                between retries.<br/>            timeout (int): Maximum seconds waiting before we give up.<br/>        &quot;&quot;&quot;<br/>        kwargs = {} if not kwargs else kwargs<br/>        args = [] if not args else args<br/>        interval_range = fxrange(interval_start,<br/>                                 interval_max + interval_start,<br/>                                 interval_step, repeatlast=True)<br/>        end = time() + timeout if timeout else None<br/>        for retries in count():<br/>            try:<br/>&gt;               return fun(*args, **kwargs)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\kombu\utils\functional.py:325: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;celery.backends.redis.ResultConsumer object at 0x00000213B26A1C50&gt;<br/><br/>    def _reconnect_pubsub(self):<br/>        self._pubsub = None<br/>        self.backend.client.connection_pool.reset()<br/>        # task state might have changed when the connection was down so we<br/>        # retrieve meta for all subscribed tasks before going into pubsub mode<br/>&gt;       metas = self.backend.client.mget(self.subscribed_to)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\backends\redis.py:105: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Redis&lt;ConnectionPool&lt;Connection&lt;host=127.0.0.1,port=6379,db=0&gt;&gt;&gt;<br/>keys = {b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;}<br/>args = [b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;], options = {}<br/><br/>    def mget(self, keys, *args):<br/>        &quot;&quot;&quot;<br/>        Returns a list of values ordered identically to ``keys``<br/>        &quot;&quot;&quot;<br/>        args = list_or_args(keys, args)<br/>        options = {}<br/>        if not args:<br/>            options[EMPTY_RESPONSE] = []<br/>&gt;       return self.execute_command(&#x27;MGET&#x27;, *args, **options)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py:1671: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Redis&lt;ConnectionPool&lt;Connection&lt;host=127.0.0.1,port=6379,db=0&gt;&gt;&gt;<br/>args = (&#x27;MGET&#x27;, b&#x27;celery-task-meta-2fddb8fe-e872-4a73-ad78-6218c609c79b&#x27;)<br/>options = {}, pool = ConnectionPool&lt;Connection&lt;host=127.0.0.1,port=6379,db=0&gt;&gt;<br/>command_name = &#x27;MGET&#x27;<br/><br/>    def execute_command(self, *args, **options):<br/>        &quot;Execute a command and return a parsed response&quot;<br/>        pool = self.connection_pool<br/>        command_name = args[0]<br/>&gt;       conn = self.connection or pool.get_connection(command_name, **options)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\client.py:898: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = ConnectionPool&lt;Connection&lt;host=127.0.0.1,port=6379,db=0&gt;&gt;<br/>command_name = &#x27;MGET&#x27;, keys = (), options = {}<br/>connection = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def get_connection(self, command_name, *keys, **options):<br/>        &quot;Get a connection from the pool&quot;<br/>        self._checkpid()<br/>        with self._lock:<br/>            try:<br/>                connection = self._available_connections.pop()<br/>            except IndexError:<br/>                connection = self.make_connection()<br/>            self._in_use_connections.add(connection)<br/>    <br/>        try:<br/>            # ensure this connection is connected to Redis<br/>&gt;           connection.connect()<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:1192: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = Connection&lt;host=127.0.0.1,port=6379,db=0&gt;<br/><br/>    def connect(self):<br/>        &quot;Connects to the Redis server if not already connected&quot;<br/>        if self._sock:<br/>            return<br/>        try:<br/>            sock = self._connect()<br/>        except socket.timeout:<br/>            raise TimeoutError(&quot;Timeout connecting to server&quot;)<br/>        except socket.error as e:<br/>&gt;           raise ConnectionError(self._error_message(e))<br/><span class="error">E           redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.</span><br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\redis\connection.py:563: ConnectionError<br/><br/>The above exception was the direct cause of the following exception:<br/><br/>self = &lt;allure_commons._allure.fixture object at 0x00000213B255F710&gt;, args = ()<br/>kwargs = {}<br/><br/>    def __call__(self, *args, **kwargs):<br/>        self.parameters = func_parameters(self._fixture_function, *args, **kwargs)<br/>    <br/>        with self:<br/>&gt;           return self._fixture_function(*args, **kwargs)<br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\allure_commons\_allure.py:200: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\conftest.py:75: in fix_module<br/>    execute_command.delay()<br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\app\task.py:421: in delay<br/>    return self.apply_async(args, kwargs)<br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\app\task.py:565: in apply_async<br/>    **options<br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\celery\app\base.py:749: in send_task<br/>    amqp.send_task_message(P, name, message, **options)<br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\contextlib.py:130: in __exit__<br/>    self.gen.throw(type, value, traceback)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;Connection: redis://127.0.0.1:6379// at 0x213b266a668&gt;<br/>ConnectionError = &lt;class &#x27;kombu.exceptions.OperationalError&#x27;&gt;<br/>ChannelError = &lt;class &#x27;kombu.exceptions.OperationalError&#x27;&gt;<br/><br/>    @contextmanager<br/>    def _reraise_as_library_errors(<br/>            self,<br/>            ConnectionError=exceptions.OperationalError,<br/>            ChannelError=exceptions.OperationalError):<br/>        try:<br/>            yield<br/>        except (ConnectionError, ChannelError):<br/>            raise<br/>        except self.recoverable_connection_errors as exc:<br/>&gt;           raise ConnectionError(str(exc)) from exc<br/><span class="error">E           kombu.exceptions.OperationalError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.</span><br/><br/>C:\Users\luban\AppData\Local\Programs\Python\Python37\lib\site-packages\kombu\connection.py:452: OperationalError<br/> -----------------------------Captured log teardown------------------------------ <br/>ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (0/20) now.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR    celery.backends.redis:redis.py:363 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL celery.backends.redis:redis.py:122 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">basic_frame/cases/test_mysql.py::TestSqlRunner::test_mysql</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;basic_frame.cases.test_mysql.TestSqlRunner object at 0x00000213B258CB70&gt;<br/>something = None<br/><br/>    @allure.story(&quot;sql_module&quot;)<br/>    @pytest.mark.mysql<br/>    def test_mysql(self, something):<br/>        res = login(17802156123, 123456)<br/>        # 根据手机号查询数据库<br/>&gt;       user_query_res = apibase.db.select_mysql(apibase.sql_data.get(&#x27;user_name&#x27;).format(17802156123))<br/><span class="error">E       AttributeError: &#x27;ApiCaseRevolution&#x27; object has no attribute &#x27;db&#x27;</span><br/><br/>cases\test_mysql.py:19: AttributeError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">basic_frame/cases/test_result.py::TestResult::test_001</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;basic_frame.cases.test_result.TestResult object at 0x00000213B25C12B0&gt;<br/>something = None<br/><br/>    @allure.step(&quot;test_001&quot;)<br/>    @allure.story(&quot;get_result_001&quot;)<br/>    @pytest.mark.get_result<br/>    def test_001(self, something):<br/>        &quot;&quot;&quot;<br/>         获取测试用例执行结果: 调用001<br/>        &quot;&quot;&quot;<br/>        print(&quot;test_001_something: &quot;, something)<br/>&gt;       apibase.assert_handle.assert_equal_value(1, 0)<br/><br/>cases\test_result.py:21: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>cls = &lt;class &#x27;basic_frame.utils.assert_handle.Assertion&#x27;&gt;, reality_value = 1<br/>expected_value = 0<br/><br/>    @classmethod<br/>    def assert_equal_value(cls, reality_value, expected_value):<br/>        &quot;&quot;&quot;<br/>        校验等于预期值<br/>        :param reality_value: 实际值<br/>        :param expected_value: 预期值<br/>        :return:<br/>        &quot;&quot;&quot;<br/>&gt;       assert expected_value == reality_value, &quot;实际值: {} != 预期值: {}&quot;.format(reality_value, expected_value)<br/><span class="error">E       AssertionError: 实际值: 1 != 预期值: 0</span><br/><br/>utils\assert_handle.py:19: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_login[test_login_mobile_empty]</td>
+          <td class="col-duration">0.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     log:test_login.py:23 login_mobile: None, login_password: 123456<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_login[test_login_password_empty]</td>
+          <td class="col-duration">0.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     log:test_login.py:23 login_mobile: 17802156775, login_password: None<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_login[test_login_mobile_error]</td>
+          <td class="col-duration">0.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     log:test_login.py:23 login_mobile: 178021567751, login_password: 123456<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_login[test_login_password_error]</td>
+          <td class="col-duration">0.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     log:test_login.py:23 login_mobile: 17802156775, login_password: 123456789<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_login[test_login_success]</td>
+          <td class="col-duration">0.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     log:test_login.py:23 login_mobile: 17802156775, login_password: 123456<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_login.py::TestLoginRunner::test_fix</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_need.py::TestNeed::test_need[1]</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_need.py::TestNeed::test_need[2]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_need.py::TestNeed::test_need[3]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_result.py::TestResult::test_002</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">basic_frame/cases/test_session.py::TestSession::test_login_session</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
